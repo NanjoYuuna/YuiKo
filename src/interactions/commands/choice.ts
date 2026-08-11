@@ -10,13 +10,13 @@ export const data = new SlashCommandBuilder()
   .setDescription('隨機抽一個選項 (例如: 壽司 披薩 漢堡)')
   .addStringOption(opt =>
     opt
-      .setName('選項')
+      .setName('input')
       .setDescription('用空格分隔的選項，例如：壽司 披薩 漢堡')
       .setRequired(true)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction): Promise<void> {
-  const input = interaction.options.getString('選項', true);
+  const input = interaction.options.getString('input', true);
 
   try {
     const options = parseOptions(input);

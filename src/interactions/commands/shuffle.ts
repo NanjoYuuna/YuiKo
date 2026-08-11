@@ -10,13 +10,13 @@ export const data = new SlashCommandBuilder()
   .setDescription('🔀 將選項重新洗牌排序 (例如: 選手A 選手B 選手C)')
   .addStringOption(opt =>
     opt
-      .setName('選項')
+      .setName('input')
       .setDescription('用空格分隔的選項，例如：選手A 選手B 選手C')
       .setRequired(true)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction): Promise<void> {
-  const input = interaction.options.getString('選項', true);
+  const input = interaction.options.getString('input', true);
 
   try {
     const options = parseOptions(input);

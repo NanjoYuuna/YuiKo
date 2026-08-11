@@ -11,13 +11,13 @@ export const data = new SlashCommandBuilder()
   .setDescription('🎲 擲骰子 (例如: 1d100, 2d6+3, 4d6kh3)')
   .addStringOption(option =>
     option
-      .setName('算式')
+      .setName('expression')
       .setDescription('骰子算式，例如：1d100, 2d6+3, 4d6kh3')
       .setRequired(true)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction): Promise<void> {
-  const expression = interaction.options.getString('算式', true);
+  const expression = interaction.options.getString('expression', true);
 
   try {
     const result = roll(expression);
