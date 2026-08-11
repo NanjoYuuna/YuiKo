@@ -4,7 +4,7 @@ import { TOKEN, PORT } from './config.js';
 import { roll } from './services/DiceService.js';
 import { parseOptions, pick, shuffle } from './services/ChoiceService.js';
 // import { spin } from './services/RouletteService.js'; // 註解輪盤
-import { handleTarotDraw } from './interactions/commands/tarot.js';
+import { handleTarotDraw, handleTarotDrawText } from './interactions/commands/tarot.js';
 
 // ─── Command Loader ────────────────────────────────────────────────────────────
 
@@ -180,6 +180,29 @@ client.on(Events.MessageCreate, async (message: Message) => {
       await message.reply(errMsg);
       return;
     }
+  }
+
+  // 4. Text Tarot Commands (/daily_tarot, 每日塔羅, 塔羅, /tarot_3, 三牌陣)
+  const lowerContent = content.toLowerCase();
+  if (
+    lowerContent === '/daily_tarot' ||
+    lowerContent === '每日塔羅' ||
+    lowerContent === '塔羅' ||
+    lowerContent === '單牌塔羅' ||
+    lowerContent === '單牌'
+  ) {
+    await handleTarotDrawText(message, 'single');
+    return;
+  }
+
+  if (
+    lowerContent === '/tarot_3' ||
+    lowerContent === '三牌陣' ||
+    lowerContent === '3牌' ||
+    lowerContent === '三牌塔羅'
+  ) {
+    await handleTarotDrawText(message, 'three');
+    return;
   }
 
   /*

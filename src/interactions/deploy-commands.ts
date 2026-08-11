@@ -36,6 +36,7 @@ const rest = new REST().setToken(TOKEN);
       );
       console.log(`✅ 成功全域註冊了 ${(data as unknown[]).length} 個指令！（生效時間最長 1 小時）`);
     }
+    process.exit(0);
   } catch (error) {
     console.error('❌ 指令註冊失敗：', error);
     process.exit(1);
