@@ -5,7 +5,7 @@ import { data as choiceData } from './commands/choice.js';
 import { data as shuffleData } from './commands/shuffle.js';
 import { dailyTarotData, tarot3Data } from './commands/tarot.js';
 // import { data as quoteData } from './commands/quote.js'; // 註解台詞迷因
-import { data as spinData } from './commands/spin.js';
+// import { data as spinData } from './commands/spin.js'; // 輪盤已停用
 
 const commands = [
   rollData.toJSON(),
@@ -14,7 +14,7 @@ const commands = [
   dailyTarotData.toJSON(),
   tarot3Data.toJSON(),
   // quoteData.toJSON(), // 註解台詞迷因
-  spinData.toJSON(),
+  // spinData.toJSON(), // 輪盤已停用
 ];
 
 const rest = new REST().setToken(TOKEN);
