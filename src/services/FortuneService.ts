@@ -1,3 +1,4 @@
+import fs from 'fs';
 import path from 'path';
 import tarotData from '../assets/tarot.json';
 
@@ -142,7 +143,19 @@ export function getDailyFortune(userId: string): FortuneResult {
  * Returns the local file system path for a given card image.
  */
 export function getCardLocalPath(card: TarotCard): string {
-  return path.join(process.cwd(), 'src', 'assets', 'tarot', card.filename);
+  const possiblePaths = [
+    path.join(process.cwd(), 'src', 'assets', 'tarot', card.filename),
+    path.join(process.cwd(), 'dist', 'assets', 'tarot', card.filename),
+    path.join(process.cwd(), 'assets', 'tarot', card.filename),
+    path.join(__dirname, '../assets/tarot', card.filename),
+  ];
+
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  return possiblePaths[0]!;
 }
 
 /**

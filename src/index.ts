@@ -93,10 +93,20 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
 
   // 2. Button Interactions (Tarot Buttons)
   if (interaction.isButton()) {
-    if (interaction.customId === 'tarot_single') {
-      await handleTarotDraw(interaction, 'single');
-    } else if (interaction.customId === 'tarot_three') {
-      await handleTarotDraw(interaction, 'three');
+    try {
+      if (interaction.customId === 'tarot_single') {
+        await handleTarotDraw(interaction, 'single');
+      } else if (interaction.customId === 'tarot_three') {
+        await handleTarotDraw(interaction, 'three');
+      }
+    } catch (error) {
+      console.error(`❌ 按鈕互動時發生錯誤 (${interaction.customId})：`, error);
+      const errorMsg = '⚠️ 處理按鈕時發生錯誤，請稍後再試。';
+      if (interaction.deferred || interaction.replied) {
+        await interaction.editReply({ content: errorMsg });
+      } else {
+        await interaction.reply({ content: errorMsg, ephemeral: true });
+      }
     }
     return;
   }
