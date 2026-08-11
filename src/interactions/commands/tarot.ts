@@ -43,7 +43,7 @@ export function getTarotButtons(): ActionRowBuilder<ButtonBuilder> {
 
 // ─── Core Payload Generator (抽出共同核心邏輯) ───────────────────────────────
 
-async function buildTarotPayload(type: 'single' | 'three', displayName: string) {
+async function buildTarotPayload(type: 'single' | 'three', displayName: string, userId: string) {
   const result = drawTarot(type);
   const buttons = getTarotButtons();
 
@@ -67,6 +67,7 @@ async function buildTarotPayload(type: 'single' | 'three', displayName: string) 
       .setTimestamp();
 
     return {
+      content: `<@${userId}>`,
       embeds: [embed],
       files: [attachment],
       components: [buttons],
@@ -104,6 +105,7 @@ async function buildTarotPayload(type: 'single' | 'three', displayName: string) 
       .setTimestamp();
 
     return {
+      content: `<@${userId}>`,
       embeds: [headerEmbed, ...embeds],
       files: cardResults.map((item) => item.attachment),
       components: [buttons],
@@ -122,7 +124,7 @@ export async function handleTarotDraw(
   }
 
   try {
-    const payload = await buildTarotPayload(type, interaction.user.displayName);
+    const payload = await buildTarotPayload(type, interaction.user.displayName, interaction.user.id);
     await interaction.editReply(payload);
   } catch (error) {
     console.error('❌ [TarotDraw] 處理塔羅牌抽牌時發生錯誤：', error);
@@ -142,7 +144,7 @@ export async function handleTarotDrawText(
   type: 'single' | 'three'
 ): Promise<void> {
   try {
-    const payload = await buildTarotPayload(type, message.author.displayName);
+    const payload = await buildTarotPayload(type, message.author.displayName, message.author.id);
     await message.reply(payload);
   } catch (error) {
     console.error('❌ [TarotDrawText] 處理塔羅牌抽牌時發生錯誤：', error);
