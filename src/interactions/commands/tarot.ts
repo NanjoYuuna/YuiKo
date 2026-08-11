@@ -20,11 +20,11 @@ import { getCardImageBuffer } from '../../services/imageHelper.js';
 
 export const dailyTarotData = new SlashCommandBuilder()
   .setName('daily_tarot')
-  .setDescription('🎴 每日塔羅（單牌洞察）');
+  .setDescription('🎴 每日塔羅');
 
 export const tarot3Data = new SlashCommandBuilder()
   .setName('tarot_3')
-  .setDescription('🔮 三牌陣（過去・現在・未來）');
+  .setDescription('🕒 時間塔羅');
 
 // ─── Button Component Helper ──────────────────────────────────────────────────
 
@@ -32,11 +32,11 @@ export function getTarotButtons(): ActionRowBuilder<ButtonBuilder> {
   return new ActionRowBuilder<ButtonBuilder>().addComponents(
     new ButtonBuilder()
       .setCustomId('tarot_single')
-      .setLabel('🎴 每日塔羅 (單牌)')
+      .setLabel('🎴 每日塔羅')
       .setStyle(ButtonStyle.Primary),
     new ButtonBuilder()
       .setCustomId('tarot_three')
-      .setLabel('🔮 三牌陣 (三牌)')
+      .setLabel('🕒 時間塔羅')
       .setStyle(ButtonStyle.Secondary)
   );
 }
@@ -58,7 +58,7 @@ export async function handleTarotDraw(
 
     if (type === 'single') {
       const card = result.cards[0]!;
-      const orientation = card.isReversed ? '🔄 逆位' : '⬆️ 正位';
+      const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
       const localPath = getCardLocalPath(card);
       const fileName = getAttachmentFileName(card);
 
@@ -66,24 +66,12 @@ export async function handleTarotDraw(
       const attachment = new AttachmentBuilder(imageBuffer, { name: fileName });
 
       const embedColor = card.isReversed ? 0x991B1B : 0x7C3AED;
-      const titleEmoji = card.isReversed ? '🔄' : '🎴';
+      const titleEmoji = '🎴';
 
       const embed = new EmbedBuilder()
         .setColor(embedColor)
         .setTitle(`${titleEmoji} ${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
         .setDescription(`*${card.name}　${orientation}*`)
-        .addFields(
-          {
-            name: '🃏 牌組',
-            value: card.arcana === 'major' ? '大阿爾克那' : `小阿爾克那・${getArcanaName(card.arcana)}`,
-            inline: true,
-          },
-          {
-            name: '🔢 編號',
-            value: card.number,
-            inline: true,
-          }
-        )
         .setImage(`attachment://${fileName}`)
         .setFooter({ text: `由 ${displayName} 抽取` })
         .setTimestamp();
@@ -108,8 +96,8 @@ export async function handleTarotDraw(
       );
 
       const embeds = cardResults.map(({ card, fileName }, i) => {
-        const orientation = card.isReversed ? '🔄 逆位' : '⬆️ 正位';
-        const titleEmoji = card.isReversed ? '🔄' : ['🌙', '☀️', '⭐'][i]!;
+        const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
+        const titleEmoji = ['⬅️', '⬇️', '➡️'][i]!;
         const embedColor = card.isReversed ? 0x991B1B : [0x1D4ED8, 0x7C3AED, 0x059669][i]!;
 
         return new EmbedBuilder()
@@ -121,8 +109,7 @@ export async function handleTarotDraw(
 
       const headerEmbed = new EmbedBuilder()
         .setColor(0x1E1B4B)
-        .setTitle('🎴 三牌陣　過去・現在・未來')
-        .setDescription(`*命運的三個時刻，為 ${displayName} 徐徐展開...*`)
+        .setTitle('🕒 時間塔羅')
         .setTimestamp();
 
       const attachments = cardResults.map((item) => item.attachment);
@@ -157,7 +144,7 @@ export async function handleTarotDrawText(
 
     if (type === 'single') {
       const card = result.cards[0]!;
-      const orientation = card.isReversed ? '🔄 逆位' : '⬆️ 正位';
+      const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
       const localPath = getCardLocalPath(card);
       const fileName = getAttachmentFileName(card);
 
@@ -165,24 +152,12 @@ export async function handleTarotDrawText(
       const attachment = new AttachmentBuilder(imageBuffer, { name: fileName });
 
       const embedColor = card.isReversed ? 0x991B1B : 0x7C3AED;
-      const titleEmoji = card.isReversed ? '🔄' : '🎴';
+      const titleEmoji = '🎴';
 
       const embed = new EmbedBuilder()
         .setColor(embedColor)
         .setTitle(`${titleEmoji} ${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
         .setDescription(`*${card.name}　${orientation}*`)
-        .addFields(
-          {
-            name: '🃏 牌組',
-            value: card.arcana === 'major' ? '大阿爾克那' : `小阿爾克那・${getArcanaName(card.arcana)}`,
-            inline: true,
-          },
-          {
-            name: '🔢 編號',
-            value: card.number,
-            inline: true,
-          }
-        )
         .setImage(`attachment://${fileName}`)
         .setFooter({ text: `由 ${displayName} 抽取` })
         .setTimestamp();
@@ -206,8 +181,8 @@ export async function handleTarotDrawText(
       );
 
       const embeds = cardResults.map(({ card, fileName }, i) => {
-        const orientation = card.isReversed ? '🔄 逆位' : '⬆️ 正位';
-        const titleEmoji = card.isReversed ? '🔄' : ['🌙', '☀️', '⭐'][i]!;
+        const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
+        const titleEmoji = ['⬅️', '⬇️', '➡️'][i]!;
         const embedColor = card.isReversed ? 0x991B1B : [0x1D4ED8, 0x7C3AED, 0x059669][i]!;
 
         return new EmbedBuilder()
@@ -219,7 +194,7 @@ export async function handleTarotDrawText(
 
       const headerEmbed = new EmbedBuilder()
         .setColor(0x1E1B4B)
-        .setTitle('🎴 三牌陣　過去・現在・未來')
+        .setTitle('🎴 時間塔羅')
         .setDescription(`*命運的三個時刻，為 ${displayName} 徐徐展開...*`)
         .setTimestamp();
 

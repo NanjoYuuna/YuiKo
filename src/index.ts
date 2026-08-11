@@ -183,24 +183,12 @@ client.on(Events.MessageCreate, async (message: Message) => {
   }
 
   // 4. Text Tarot Commands (/daily_tarot, 每日塔羅, 塔羅, /tarot_3, 三牌陣)
-  const lowerContent = content.toLowerCase();
-  if (
-    lowerContent === '/daily_tarot' ||
-    lowerContent === '每日塔羅' ||
-    lowerContent === '塔羅' ||
-    lowerContent === '單牌塔羅' ||
-    lowerContent === '單牌'
-  ) {
+  if (content === '每日塔羅') {
     await handleTarotDrawText(message, 'single');
     return;
   }
 
-  if (
-    lowerContent === '/tarot_3' ||
-    lowerContent === '三牌陣' ||
-    lowerContent === '3牌' ||
-    lowerContent === '三牌塔羅'
-  ) {
+  if (content === '時間塔羅') {
     await handleTarotDrawText(message, 'three');
     return;
   }
