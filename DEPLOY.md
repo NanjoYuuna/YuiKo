@@ -108,7 +108,9 @@ npm run dev
 6. 點選 **Advanced** → **Add Environment Variable**，新增：
    - `DISCORD_TOKEN` = 你的 Bot Token
    - `CLIENT_ID` = 你的 Application ID
-   - `GUILD_ID` = 你的伺服器 ID（**必填**，讓指令即時生效；不填則全域註冊需等 1 小時）
+   - `GUILD_ID` = （**選填**）你的伺服器 ID
+     - ✅ **填寫**：指令只在該伺服器生效，部署後立即可用（適合開發測試）
+     - ⏳ **不填**：全域指令，所有伺服器都能使用，首次需等最多 **1 小時**生效（之後更新即時）
 
 7. 點選 **Create Web Service** 開始部署
 
