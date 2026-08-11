@@ -22,27 +22,23 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
     const options = parseOptions(input);
     const result = pick(options);
 
-    const embed = new EmbedBuilder()
-      .setColor(0xF59E0B)
-      .setTitle('🎯 命運之手的選擇')
-      .addFields(
-        {
-          name: '✨ 選出結果',
-          value: `## **${result.picked}**`,
-          inline: false,
-        },
-        {
-          name: '📋 所有選項',
-          value: options.map(o => o === result.picked ? `> **${o}** ←` : o).join('　'),
-          inline: false,
-        }
-      )
-      .setFooter({ text: `${options.length} 個選項　由 ${interaction.user.displayName} 發起` })
-      .setTimestamp();
+    const embed = buildChoiceEmbed(result.picked, options, interaction.user.displayName);
 
     await interaction.reply({ embeds: [embed] });
   } catch (error) {
     const message = error instanceof Error ? error.message : '未知錯誤';
     await interaction.reply({ content: message, ephemeral: true });
   }
+}
+
+export function buildChoiceEmbed(picked: string, options: string[], userName: string): EmbedBuilder {
+  return new EmbedBuilder()
+    .setColor(0xF59E0B)
+    .setTitle('隨機')
+    .setDescription(
+      `### 👉 ${picked}\n\n` +
+      `**選項**\n` +
+      `${options.join(' ')}`
+    )
+    .setFooter({ text: `由 ${userName} 發起` });
 }
