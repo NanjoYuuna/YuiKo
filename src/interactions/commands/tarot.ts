@@ -41,6 +41,76 @@ export function getTarotButtons(): ActionRowBuilder<ButtonBuilder> {
   );
 }
 
+// ─── Core Payload Generator (抽出共同核心邏輯) ───────────────────────────────
+
+async function buildTarotPayload(type: 'single' | 'three', displayName: string) {
+  const result = drawTarot(type);
+  const buttons = getTarotButtons();
+
+  if (type === 'single') {
+    const card = result.cards[0]!;
+    const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
+    const localPath = getCardLocalPath(card);
+    const fileName = getAttachmentFileName(card);
+
+    const imageBuffer = await getCardImageBuffer(localPath, card.isReversed);
+    const attachment = new AttachmentBuilder(imageBuffer, { name: fileName });
+
+    const embedColor = card.isReversed ? 0x991B1B : 0x7C3AED;
+
+    const embed = new EmbedBuilder()
+      .setColor(embedColor)
+      .setTitle(`🎴 ${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
+      .setDescription(`*${card.name} ${orientation}*`)
+      .setImage(`attachment://${fileName}`)
+      .setFooter({ text: `由 ${displayName} 抽取` })
+      .setTimestamp();
+
+    return {
+      embeds: [embed],
+      files: [attachment],
+      components: [buttons],
+    };
+  } else {
+    const labels = result.spreadLabel!;
+
+    const cardResults = await Promise.all(
+      result.cards.map(async (card) => {
+        const localPath = getCardLocalPath(card);
+        const fileName = getAttachmentFileName(card);
+        const buffer = await getCardImageBuffer(localPath, card.isReversed);
+        const attachment = new AttachmentBuilder(buffer, { name: fileName });
+        return { card, fileName, attachment };
+      })
+    );
+
+    const embeds = cardResults.map(({ card, fileName }, i) => {
+      const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
+      const titleEmoji = ['⬅️', '⬇️', '➡️'][i]!;
+      const embedColor = card.isReversed ? 0x991B1B : [0x1D4ED8, 0x7C3AED, 0x059669][i]!;
+
+      return new EmbedBuilder()
+        .setColor(embedColor)
+        .setTitle(`${titleEmoji} ${labels[i]!}：${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
+        .setDescription(`*${card.name} ${orientation}*`)
+        .setThumbnail(`attachment://${fileName}`);
+    });
+
+    const headerEmbed = new EmbedBuilder()
+      .setColor(0x1E1B4B)
+      .setTitle('🎴 時間塔羅')
+      .setDescription('*過去・現在・未來...*')
+      .setFooter({ text: `由 ${displayName} 抽取` })
+      .setTimestamp();
+
+    return {
+      embeds: [headerEmbed, ...embeds],
+      files: cardResults.map((item) => item.attachment),
+      components: [buttons],
+    };
+  }
+}
+
 // ─── Interaction Execution Helper ─────────────────────────────────────────────
 
 export async function handleTarotDraw(
@@ -52,74 +122,8 @@ export async function handleTarotDraw(
   }
 
   try {
-    const result = drawTarot(type);
-    const buttons = getTarotButtons();
-    const displayName = interaction.user.displayName;
-
-    if (type === 'single') {
-      const card = result.cards[0]!;
-      const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
-      const localPath = getCardLocalPath(card);
-      const fileName = getAttachmentFileName(card);
-
-      const imageBuffer = await getCardImageBuffer(localPath, card.isReversed);
-      const attachment = new AttachmentBuilder(imageBuffer, { name: fileName });
-
-      const embedColor = card.isReversed ? 0x991B1B : 0x7C3AED;
-      const titleEmoji = '🎴';
-
-      const embed = new EmbedBuilder()
-        .setColor(embedColor)
-        .setTitle(`${titleEmoji} ${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
-        .setDescription(`*${card.name}　${orientation}*`)
-        .setImage(`attachment://${fileName}`)
-        .setFooter({ text: `由 ${displayName} 抽取` })
-        .setTimestamp();
-
-      await interaction.editReply({
-        embeds: [embed],
-        files: [attachment],
-        components: [buttons],
-      });
-
-    } else {
-      const labels = result.spreadLabel!;
-
-      const cardResults = await Promise.all(
-        result.cards.map(async (card) => {
-          const localPath = getCardLocalPath(card);
-          const fileName = getAttachmentFileName(card);
-          const buffer = await getCardImageBuffer(localPath, card.isReversed);
-          const attachment = new AttachmentBuilder(buffer, { name: fileName });
-          return { card, fileName, attachment };
-        })
-      );
-
-      const embeds = cardResults.map(({ card, fileName }, i) => {
-        const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
-        const titleEmoji = ['⬅️', '⬇️', '➡️'][i]!;
-        const embedColor = card.isReversed ? 0x991B1B : [0x1D4ED8, 0x7C3AED, 0x059669][i]!;
-
-        return new EmbedBuilder()
-          .setColor(embedColor)
-          .setTitle(`${titleEmoji} ${labels[i]!}：${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
-          .setDescription(`*${card.name}　${orientation}*`)
-          .setThumbnail(`attachment://${fileName}`);
-      });
-
-      const headerEmbed = new EmbedBuilder()
-        .setColor(0x1E1B4B)
-        .setTitle('🕒 時間塔羅')
-        .setTimestamp();
-
-      const attachments = cardResults.map((item) => item.attachment);
-
-      await interaction.editReply({
-        embeds: [headerEmbed, ...embeds],
-        files: attachments,
-        components: [buttons],
-      });
-    }
+    const payload = await buildTarotPayload(type, interaction.user.displayName);
+    await interaction.editReply(payload);
   } catch (error) {
     console.error('❌ [TarotDraw] 處理塔羅牌抽牌時發生錯誤：', error);
     const errorMsg = '⚠️ 處理塔羅牌抽牌時發生錯誤，請稍後再試。';
@@ -138,86 +142,10 @@ export async function handleTarotDrawText(
   type: 'single' | 'three'
 ): Promise<void> {
   try {
-    const result = drawTarot(type);
-    const buttons = getTarotButtons();
-    const displayName = message.author.displayName;
-
-    if (type === 'single') {
-      const card = result.cards[0]!;
-      const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
-      const localPath = getCardLocalPath(card);
-      const fileName = getAttachmentFileName(card);
-
-      const imageBuffer = await getCardImageBuffer(localPath, card.isReversed);
-      const attachment = new AttachmentBuilder(imageBuffer, { name: fileName });
-
-      const embedColor = card.isReversed ? 0x991B1B : 0x7C3AED;
-      const titleEmoji = '🎴';
-
-      const embed = new EmbedBuilder()
-        .setColor(embedColor)
-        .setTitle(`${titleEmoji} ${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
-        .setDescription(`*${card.name}　${orientation}*`)
-        .setImage(`attachment://${fileName}`)
-        .setFooter({ text: `由 ${displayName} 抽取` })
-        .setTimestamp();
-
-      await message.reply({
-        embeds: [embed],
-        files: [attachment],
-        components: [buttons],
-      });
-    } else {
-      const labels = result.spreadLabel!;
-
-      const cardResults = await Promise.all(
-        result.cards.map(async (card) => {
-          const localPath = getCardLocalPath(card);
-          const fileName = getAttachmentFileName(card);
-          const buffer = await getCardImageBuffer(localPath, card.isReversed);
-          const attachment = new AttachmentBuilder(buffer, { name: fileName });
-          return { card, fileName, attachment };
-        })
-      );
-
-      const embeds = cardResults.map(({ card, fileName }, i) => {
-        const orientation = card.isReversed ? '🌙 逆位' : '☀️ 正位';
-        const titleEmoji = ['⬅️', '⬇️', '➡️'][i]!;
-        const embedColor = card.isReversed ? 0x991B1B : [0x1D4ED8, 0x7C3AED, 0x059669][i]!;
-
-        return new EmbedBuilder()
-          .setColor(embedColor)
-          .setTitle(`${titleEmoji} ${labels[i]!}：${card.nameZh}（${card.isReversed ? '逆位' : '正位'}）`)
-          .setDescription(`*${card.name}　${orientation}*`)
-          .setThumbnail(`attachment://${fileName}`);
-      });
-
-      const headerEmbed = new EmbedBuilder()
-        .setColor(0x1E1B4B)
-        .setTitle('🎴 時間塔羅')
-        .setDescription(`*命運的三個時刻，為 ${displayName} 徐徐展開...*`)
-        .setTimestamp();
-
-      const attachments = cardResults.map((item) => item.attachment);
-
-      await message.reply({
-        embeds: [headerEmbed, ...embeds],
-        files: attachments,
-        components: [buttons],
-      });
-    }
+    const payload = await buildTarotPayload(type, message.author.displayName);
+    await message.reply(payload);
   } catch (error) {
     console.error('❌ [TarotDrawText] 處理塔羅牌抽牌時發生錯誤：', error);
     await message.reply('⚠️ 處理塔羅牌抽牌時發生錯誤，請稍後再試。');
   }
-}
-
-function getArcanaName(arcana: string): string {
-  const names: Record<string, string> = {
-    wands: '權杖',
-    cups: '聖杯',
-    swords: '寶劍',
-    pentacles: '五角星',
-  };
-  return names[arcana] ?? arcana;
 }
