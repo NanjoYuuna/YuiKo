@@ -136,10 +136,10 @@ client.on(Events.MessageCreate, async (message: Message) => {
 
   const content = message.content.trim();
 
-  // 1. Text Dice Rolling (r 1d100 OR direct 1d100, 2d6+3, 4d6kh3, 5d10>6)
+  // 1. Text Dice Rolling (e.g. 1d20, 1D20, r 1d20, /r 1d20, /roll 1D20, 2d6+3, 4d6kh3, 5d10>6)
   let diceExpression: string | null = null;
 
-  const rShortcutMatch = content.match(/^r\s+([0-9]+[dD][0-9]+.*)$/i);
+  const rShortcutMatch = content.match(/^(?:\/roll|\/r|r)\s+(.+)$/i);
   const directDiceMatch = content.match(/^([0-9]+[dD][0-9]+(?:kh[0-9]+|kl[0-9]+|>[0-9]+)?(?:[+-][0-9]+)?)$/i);
 
   if (rShortcutMatch) {
@@ -151,18 +151,21 @@ client.on(Events.MessageCreate, async (message: Message) => {
   if (diceExpression) {
     try {
       const result = roll(diceExpression);
-
       const embed = rollCommand.buildRollEmbed(diceExpression, result, message.author.displayName);
-
       await message.reply({ embeds: [embed] });
       return;
-    } catch {
+    } catch (error) {
+      // 只有在明確使用了 /roll, /r, r 開頭時，解析失敗才給予錯誤回應
+      if (rShortcutMatch) {
+        const errMsg = error instanceof Error ? error.message : '未知錯誤';
+        await message.reply(errMsg);
+      }
       return;
     }
   }
 
-  // 2. Text Choice (隨機 壽司 披薩 漢堡)
-  const choiceMatch = content.match(/^隨機\s+(.+)$/);
+  // 2. Text Choice (e.g. 隨機 壽司 披薩 / /隨機 壽司 披薩 / choice 壽司 披薩 / /choice 壽司 披薩)
+  const choiceMatch = content.match(/^(?:\/隨機|\/choice|隨機|choice)\s+(.+)$/i);
   if (choiceMatch) {
     try {
       const rawOptions = choiceMatch[1]!;
@@ -170,7 +173,6 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const result = pick(options);
 
       const embed = choiceCommand.buildChoiceEmbed(result.picked, options, message.author.displayName);
-
       await message.reply({ embeds: [embed] });
       return;
     } catch (error) {
@@ -180,8 +182,8 @@ client.on(Events.MessageCreate, async (message: Message) => {
     }
   }
 
-  // 3. Text Shuffle (排序 選手A 選手B 選手C)
-  const shuffleMatch = content.match(/^排序\s+(.+)$/);
+  // 3. Text Shuffle (e.g. 排序 選手A 選手B / /排序 A B / shuffle A B / /shuffle A B)
+  const shuffleMatch = content.match(/^(?:\/排序|\/shuffle|排序|shuffle)\s+(.+)$/i);
   if (shuffleMatch) {
     try {
       const rawOptions = shuffleMatch[1]!;
@@ -189,7 +191,6 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const result = shuffle(options);
 
       const embed = shuffleCommand.buildShuffleEmbed(result.shuffled, message.author.displayName);
-
       await message.reply({ embeds: [embed] });
       return;
     } catch (error) {
@@ -199,21 +200,16 @@ client.on(Events.MessageCreate, async (message: Message) => {
     }
   }
 
-  // 4. Text Tarot Commands (/daily_tarot, 每日塔羅, 塔羅, /tarot_3, 三牌陣)
-  if (content === '每日塔羅') {
+  // 4. Text Tarot Commands (/daily_tarot, 每日塔羅, /tarot_3, 時間塔羅)
+  if (content === '每日塔羅' || content === '/daily_tarot') {
     await handleTarotDrawText(message, 'single');
     return;
   }
 
-  if (content === '時間塔羅') {
+  if (content === '時間塔羅' || content === '/tarot_3') {
     await handleTarotDrawText(message, 'three');
     return;
   }
-
-  /*
-  // 4. 輪盤文字指令（已註解停用）
-  // const spinMatch = content.match(/^輪盤\s+(.+)$/);
-  */
 });
 
 // ─── Health-Check HTTP Server ─────────────────────────────────────────────────
