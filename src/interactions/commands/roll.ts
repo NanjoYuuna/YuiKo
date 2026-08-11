@@ -2,8 +2,9 @@ import {
   ChatInputCommandInteraction,
   EmbedBuilder,
   SlashCommandBuilder,
+  MessageFlags,
 } from 'discord.js';
-import { roll } from '../../services/DiceService.js';
+import { roll, DiceResult } from '../../services/DiceService.js';
 
 export const data = new SlashCommandBuilder()
   .setName('roll')
@@ -20,42 +21,28 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
 
   try {
     const result = roll(expression);
-
-    const embed = new EmbedBuilder()
-      .setColor(0x00A8E8)
-      .setTitle('🎲 擲骰結果')
-      .setDescription(`\`\`\`\n${expression}\n\`\`\``)
-      .addFields(
-        {
-          name: '🎯 骰出結果',
-          value: result.breakdown,
-          inline: false,
-        },
-        {
-          name: result.successCount !== undefined ? '✅ 成功數' : '📊 最終總和',
-          value: `# **${result.total}**`,
-          inline: true,
-        },
-        {
-          name: '🎲 骰子顆數',
-          value: `${result.rolls.length} 顆 d${expression.match(/d(\d+)/i)?.[1] ?? '?'}`,
-          inline: true,
-        }
-      )
-      .setFooter({ text: `由 ${interaction.user.displayName} 擲出` })
-      .setTimestamp();
-
-    if (result.modifier !== 0) {
-      embed.addFields({
-        name: '➕ 修正值',
-        value: result.modifier > 0 ? `+${result.modifier}` : `${result.modifier}`,
-        inline: true,
-      });
-    }
+    const embed = buildRollEmbed(expression, result, interaction.user.displayName);
 
     await interaction.reply({ embeds: [embed] });
   } catch (error) {
     const message = error instanceof Error ? error.message : '未知錯誤';
-    await interaction.reply({ content: message, ephemeral: true });
+    await interaction.reply({ content: message, flags: MessageFlags.Ephemeral });
   }
+}
+
+export function buildRollEmbed(expression: string, result: DiceResult, userName: string): EmbedBuilder {
+  return new EmbedBuilder()
+    .setColor(0x00A8E8)
+    .setTitle('🎲 擲骰結果')
+    .setDescription(
+      `> **\` ${expression} \`**\n\n` +
+      `### 👉 **${result.total}**`
+    )
+    .addFields({
+      name: '🎲 擲骰過程',
+      value: result.breakdown,
+      inline: false,
+    })
+    .setFooter({ text: `由 ${userName} 擲出` })
+    .setTimestamp();
 }

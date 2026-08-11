@@ -125,37 +125,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
     try {
       const result = roll(diceExpression);
 
-      const embed = new EmbedBuilder()
-        .setColor(0x00A8E8)
-        .setTitle('🎲 擲骰結果')
-        .setDescription(`\`\`\`\n${diceExpression}\n\`\`\``)
-        .addFields(
-          {
-            name: '🎯 骰出結果',
-            value: result.breakdown,
-            inline: false,
-          },
-          {
-            name: result.successCount !== undefined ? '✅ 成功數' : '📊 最終總和',
-            value: `# **${result.total}**`,
-            inline: true,
-          },
-          {
-            name: '🎲 骰子顆數',
-            value: `${result.rolls.length} 顆 d${diceExpression.match(/d(\d+)/i)?.[1] ?? '?'}`,
-            inline: true,
-          }
-        )
-        .setFooter({ text: `由 ${message.author.displayName} 擲出` })
-        .setTimestamp();
-
-      if (result.modifier !== 0) {
-        embed.addFields({
-          name: '➕ 修正值',
-          value: result.modifier > 0 ? `+${result.modifier}` : `${result.modifier}`,
-          inline: true,
-        });
-      }
+      const embed = rollCommand.buildRollEmbed(diceExpression, result, message.author.displayName);
 
       await message.reply({ embeds: [embed] });
       return;

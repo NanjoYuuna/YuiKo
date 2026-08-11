@@ -36,7 +36,7 @@ export function buildShuffleEmbed(shuffledOptions: string[], userName: string): 
 
   return new EmbedBuilder()
     .setColor(0x8B5CF6)
-    .setTitle('🔀 隨機排序')
+    .setTitle('🔁 隨機排序')
     .setDescription(`## ${arrowDisplay}`)
     .setFooter({ text: `${shuffledOptions.length} 個選項 ‧ 由 ${userName} 發起` })
     .setTimestamp();
