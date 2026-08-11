@@ -102,12 +102,13 @@ npm run dev
    |--------|-----|
    | **Name** | `yuiko` |
    | **Environment** | `Node` |
-   | **Build Command** | `npm install && npm run build` |
+   | **Build Command** | `npm install && npm run build && node dist/interactions/deploy-commands.js` |
    | **Start Command** | `npm run start` |
 
 6. 點選 **Advanced** → **Add Environment Variable**，新增：
    - `DISCORD_TOKEN` = 你的 Bot Token
    - `CLIENT_ID` = 你的 Application ID
+   - `GUILD_ID` = 你的伺服器 ID（**必填**，讓指令即時生效；不填則全域註冊需等 1 小時）
 
 7. 點選 **Create Web Service** 開始部署
 

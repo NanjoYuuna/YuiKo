@@ -57,9 +57,26 @@ client.once(Events.ClientReady, (readyClient) => {
   console.log(`📡 已連接 ${readyClient.guilds.cache.size} 個伺服器`);
   console.log(`🎲 已載入 ${commands.size} 個指令\n`);
 
-  readyClient.user.setActivity('🎲 1d100 | 隨機 | 排序', { type: 0 });
-});
+  // 定義要輪播的狀態清單
+  const activities = [
+    { name: '/roll 擲骰子', type: 0 }, // 0: Playing (正在玩)
+    { name: '/daily_tarot 每日塔羅', type: 0 },
+    { name: '隨機 / 排序 決定困難症', type: 0 },
+    { name: `服務 ${readyClient.guilds.cache.size} 個伺服器`, type: 3 }, // 3: Watching (正在看)
+  ];
 
+  let currentIndex = 0;
+
+  // 每一小時或每 30 秒切換一次（建議設 1~5 分鐘，避免觸發 API 速率限制）
+  setInterval(() => {
+    const activity = activities[currentIndex];
+    readyClient.user.setActivity(activity.name, { type: activity.type });
+    currentIndex = (currentIndex + 1) % activities.length;
+  }, 2 * 60 * 1000); // 每 2 分鐘切換一次
+
+  // 剛上線時先設定第一個
+  readyClient.user.setActivity(activities[0].name, { type: activities[0].type });
+});
 // ─── Event: Interaction (Slash & Buttons) ──────────────────────────────────────
 
 client.on(Events.InteractionCreate, async (interaction: Interaction) => {
