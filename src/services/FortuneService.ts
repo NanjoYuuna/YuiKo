@@ -1,3 +1,4 @@
+import path from 'path';
 import tarotData from '../assets/tarot.json';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -11,6 +12,7 @@ export interface TarotCard {
   uprightMeaning: string;
   reversedMeaning: string;
   imageUrl: string;
+  filename: string;
 }
 
 export interface DrawnCard extends TarotCard {
@@ -137,7 +139,24 @@ export function getDailyFortune(userId: string): FortuneResult {
 // ─── Tarot ────────────────────────────────────────────────────────────────────
 
 /**
- * Draws tarot cards. Each card independently determines upright/reversed.
+ * Returns the local file system path for a given card image.
+ */
+export function getCardLocalPath(card: TarotCard): string {
+  return path.join(process.cwd(), 'src', 'assets', 'tarot', card.filename);
+}
+
+/**
+ * Generates a dynamic attachment filename for Discord (e.g. fool-upright.jpg or fool-reversed.jpg).
+ */
+export function getAttachmentFileName(card: DrawnCard): string {
+  const ext = path.extname(card.filename) || '.jpg';
+  const base = path.basename(card.filename, ext);
+  const state = card.isReversed ? 'reversed' : 'upright';
+  return `${base}-${state}${ext}`;
+}
+
+/**
+ * Draws tarot cards. Each card independently determines upright/reversed (50% chance).
  */
 export function drawTarot(type: 'single' | 'three'): TarotResult {
   const count = type === 'single' ? 1 : 3;
@@ -152,7 +171,7 @@ export function drawTarot(type: 'single' | 'three'): TarotResult {
   const drawn = deck.slice(0, count);
 
   const cards: DrawnCard[] = drawn.map(card => {
-    const isReversed = Math.random() < 0.3; // 30% chance of reversal
+    const isReversed = Math.random() < 0.5; // 50% chance of reversal
     return {
       ...card,
       isReversed,
@@ -166,3 +185,4 @@ export function drawTarot(type: 'single' | 'three'): TarotResult {
 
   return { type, cards, spreadLabel };
 }
+

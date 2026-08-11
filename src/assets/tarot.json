@@ -7,7 +7,8 @@
     "number": "0",
     "uprightMeaning": "新的開始、冒險精神、自發性、純真無畏。你站在懸崖邊緣，準備踏上一段未知旅程，宇宙將會支持你的勇氣。",
     "reversedMeaning": "魯莽衝動、缺乏計畫、不負責任、逃避現實。請在行動前多加思考，莫讓衝動讓你跌入深淵。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+    "filename": "fool.jpg"
   },
   {
     "id": 1,
@@ -17,7 +18,8 @@
     "number": "I",
     "uprightMeaning": "意志力、技巧、資源、行動力。你擁有實現目標所需的一切工具，現在是展現能力的最佳時機。",
     "reversedMeaning": "操縱、技巧運用不當、欺騙、潛能未被發揮。謹防周遭有人用花言巧語誤導你。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+    "filename": "magician.jpg"
   },
   {
     "id": 2,
@@ -27,7 +29,8 @@
     "number": "II",
     "uprightMeaning": "直覺、潛意識、神秘知識、內在聲音。此刻不需要急於行動，靜下心來聆聽你內心深處的智慧。",
     "reversedMeaning": "壓抑直覺、隱藏事物、表面行事、忽略內心。你可能正在迴避某個你已經知道答案的問題。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+    "filename": "high-priestess.jpg"
   },
   {
     "id": 3,
@@ -37,7 +40,8 @@
     "number": "III",
     "uprightMeaning": "豐盛、母性、創造力、大自然。生命中充滿了成長與豐收的能量，享受當下的美麗與富足。",
     "reversedMeaning": "創造力受阻、過度依賴、忽視自我、停滯不前。試著從大自然中汲取能量，重新找回內心的平靜。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/RWS_Tarot_03_Empress.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/RWS_Tarot_03_Empress.jpg",
+    "filename": "empress.jpg"
   },
   {
     "id": 4,
@@ -47,7 +51,8 @@
     "number": "IV",
     "uprightMeaning": "權威、結構、穩定、領導力。以紀律與秩序建立穩固的基礎，你的決心與領導力將帶來成果。",
     "reversedMeaning": "獨裁、缺乏彈性、控制欲過強、失去掌控。審視自己是否過於固執，學習適時放手。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+    "filename": "emperor.jpg"
   },
   {
     "id": 5,
@@ -57,7 +62,8 @@
     "number": "V",
     "uprightMeaning": "傳統、信仰、精神指引、制度。尋求前輩或導師的智慧，在既有的框架中找到意義與力量。",
     "reversedMeaning": "打破規則、反傳統、個人信仰、束縛。你可能需要質疑既有的規範，找到屬於自己的道路。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+    "filename": "hierophant.jpg"
   },
   {
     "id": 6,
@@ -67,7 +73,8 @@
     "number": "VI",
     "uprightMeaning": "愛情、和諧、關係、選擇。面對重要的抉擇，跟隨你的心，建立真實且深刻的連結。",
     "reversedMeaning": "失衡、不忠、衝突、錯誤的選擇。關係中可能存在溝通問題，誠實面對自己的感受。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
+    "filename": "lovers.jpg"
   },
   {
     "id": 7,
@@ -77,7 +84,8 @@
     "number": "VII",
     "uprightMeaning": "意志力、掌控、決心、勝利。以強大的意志力駕馭前進，任何阻礙都無法擋住你的步伐。",
     "reversedMeaning": "失控、方向迷失、侵略性、缺乏自律。重新審視你的目標與動力，避免讓情緒主導行動。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+    "filename": "chariot.jpg"
   },
   {
     "id": 8,
@@ -87,7 +95,8 @@
     "number": "VIII",
     "uprightMeaning": "內在力量、勇氣、耐心、溫柔的掌控。真正的力量來自內心的平靜與對自我的信任，而非蠻力。",
     "reversedMeaning": "自我懷疑、軟弱、缺乏信心、壓抑情緒。學習接受自己的不完美，從弱點中找到成長的空間。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+    "filename": "strength.jpg"
   },
   {
     "id": 9,
@@ -97,7 +106,8 @@
     "number": "IX",
     "uprightMeaning": "內省、獨處、引導、尋求真相。退後一步，在寧靜中尋找答案，你的內在智慧是最好的指引。",
     "reversedMeaning": "孤立、拒絕幫助、迷失方向、固執己見。過度的孤立可能讓你與現實脫節，試著向他人開放。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+    "filename": "hermit.jpg"
   },
   {
     "id": 10,
@@ -107,7 +117,8 @@
     "number": "X",
     "uprightMeaning": "命運、轉折、好運、循環。生命的輪子正在轉動，一個新的週期即將開始，把握這股向上的能量。",
     "reversedMeaning": "壞運氣、阻力、不幸、外力控制。即使事情不如意，請記得命運的輪子終將再次轉動。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+    "filename": "fortune-wheel.jpg"
   },
   {
     "id": 11,
@@ -117,7 +128,8 @@
     "number": "XI",
     "uprightMeaning": "公平、真相、法律、因果。你的行為將得到公正的回報，誠實與正直是此刻最重要的態度。",
     "reversedMeaning": "不公平、不誠實、逃避責任、偏見。面對自己的行為與後果，逃避只會讓問題更加複雜。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+    "filename": "justice.jpg"
   },
   {
     "id": 12,
@@ -127,7 +139,8 @@
     "number": "XII",
     "uprightMeaning": "暫停、犧牲、新視角、接受。暫時的停滯是為了更好的前進，從不同角度看待問題，你將獲得新的啟示。",
     "reversedMeaning": "拖延、固執、不願犧牲、停滯。你可能正在抗拒某個必要的改變，學習放手才能繼續前行。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg",
+    "filename": "hanged-man.jpg"
   },
   {
     "id": 13,
@@ -137,7 +150,8 @@
     "number": "XIII",
     "uprightMeaning": "結束、轉化、過渡、新生。舊的事物必須結束，才能為新的開始騰出空間。這是成長與蛻變的時刻。",
     "reversedMeaning": "抗拒改變、停滯不前、無法放手、腐敗。執著於過去只會阻礙你前進，試著接受必要的結束。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+    "filename": "death.jpg"
   },
   {
     "id": 14,
@@ -147,7 +161,8 @@
     "number": "XIV",
     "uprightMeaning": "平衡、耐心、調和、中庸之道。找到生活中各個面向的平衡，以耐心和包容心對待自己與他人。",
     "reversedMeaning": "失衡、過度、缺乏自制、衝突。生活中某個面向可能過於極端，試著尋找中間的平衡點。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+    "filename": "temperance.jpg"
   },
   {
     "id": 15,
@@ -157,7 +172,8 @@
     "number": "XV",
     "uprightMeaning": "束縛、物質主義、成癮、陰暗面。你可能被某種執著或恐懼所束縛，是時候正視這些阻礙你自由的枷鎖。",
     "reversedMeaning": "解脫、重獲自由、打破束縛、自我認知。你正在從過去的枷鎖中解脫，重新掌握自己的力量。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+    "filename": "devil.jpg"
   },
   {
     "id": 16,
@@ -167,7 +183,8 @@
     "number": "XVI",
     "uprightMeaning": "突然的改變、混亂、啟示、顛覆。雷電擊碎了虛假的建築，雖然過程痛苦，但這是必要的清除與重建。",
     "reversedMeaning": "恐懼改變、逃避危機、延遲災難、內部崩潰。你可能在迴避一個無法避免的困境，面對它才能真正解決。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+    "filename": "tower.jpg"
   },
   {
     "id": 17,
@@ -177,7 +194,8 @@
     "number": "XVII",
     "uprightMeaning": "希望、信念、啟發、寧靜。在黑暗之後，星光帶來了希望與平靜。相信宇宙的善意，美好的事物即將到來。",
     "reversedMeaning": "絕望、缺乏信念、悲觀、失去方向。即使感到迷失，請記得黑暗過後，星光依然會閃耀。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+    "filename": "stars.jpg"
   },
   {
     "id": 18,
@@ -187,7 +205,8 @@
     "number": "XVIII",
     "uprightMeaning": "幻覺、恐懼、潛意識、混亂。月光下的世界充滿迷霧，謹慎辨別幻覺與現實，相信你的直覺。",
     "reversedMeaning": "釋放恐懼、重獲清晰、走出混亂。迷霧正在散去，你逐漸看清事物的真相，繼續前行。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+    "filename": "moon.jpg"
   },
   {
     "id": 19,
@@ -197,7 +216,8 @@
     "number": "XIX",
     "uprightMeaning": "快樂、成功、活力、正能量。燦爛的陽光照耀著你，這是充滿喜悅與成就的美好時刻，盡情享受生命！",
     "reversedMeaning": "過度樂觀、暫時的阻礙、缺乏自信。即使烏雲暫時遮住了陽光，太陽依然在那裡，保持積極心態。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
+    "filename": "sun.jpg"
   },
   {
     "id": 20,
@@ -207,7 +227,8 @@
     "number": "XX",
     "uprightMeaning": "覺醒、重生、救贖、最終評估。聆聽內心的召喚，勇於面對過去，以全新的自我迎接未來。",
     "reversedMeaning": "自我懷疑、拒絕覺醒、錯失良機、無法原諒自己。原諒自己的過去，才能真正從中解脫並前進。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+    "filename": "judgement.jpg"
   },
   {
     "id": 21,
@@ -217,62 +238,623 @@
     "number": "XXI",
     "uprightMeaning": "完成、整合、成就、旅程的終點。你已經完成了一個重要的循環，值得慶祝這份圓滿的成就！",
     "reversedMeaning": "未完成的事業、停滯、缺乏閉合感。某件事情尚未真正完成，找到缺失的最後一塊拼圖。",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg"
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+    "filename": "world.jpg"
   },
-  { "id": 22, "name": "Ace of Wands", "nameZh": "權杖王牌", "arcana": "wands", "number": "Ace", "uprightMeaning": "新的靈感、創業精神、成長潛力。一股強大的創造力正在萌發，抓住這份衝動並付諸行動。", "reversedMeaning": "創意受阻、延遲、缺乏動力。靈感似乎被什麼卡住了，試著換個環境或角度重新激發熱情。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg" },
-  { "id": 23, "name": "Two of Wands", "nameZh": "權杖二", "arcana": "wands", "number": "2", "uprightMeaning": "規劃、未來願景、擴展。你正站在高處俯瞰廣闊的未來，是時候制定計畫並勇敢前行。", "reversedMeaning": "恐懼未知、缺乏計畫、舒適圈。你可能因為害怕未知而不願踏出舒適圈，鼓起勇氣邁出第一步。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg" },
-  { "id": 24, "name": "Three of Wands", "nameZh": "權杖三", "arcana": "wands", "number": "3", "uprightMeaning": "擴張、預見、機會即將到來。你的船隊正在歸航，等待中充滿了期待與希望，好消息即將到來。", "reversedMeaning": "延誤、缺乏遠見、挫折。計畫可能遭遇阻礙，保持耐心並調整策略以適應新的情況。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg" },
-  { "id": 25, "name": "Four of Wands", "nameZh": "權杖四", "arcana": "wands", "number": "4", "uprightMeaning": "慶典、穩定、家庭、里程碑。值得慶祝的時刻！與你愛的人分享這份喜悅，享受努力帶來的成果。", "reversedMeaning": "缺乏支持、家庭衝突、不穩定。家庭或群體中可能存在緊張局勢，需要溝通與理解來化解。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg" },
-  { "id": 26, "name": "Five of Wands", "nameZh": "權杖五", "arcana": "wands", "number": "5", "uprightMeaning": "衝突、競爭、分歧、挑戰。面對多方意見的衝突，保持冷靜，從競爭中找到成長的機會。", "reversedMeaning": "避免衝突、解決紛爭、內部競爭。衝突正在緩解，尋求共識與合作，讓事情重回正軌。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg" },
-  { "id": 27, "name": "Six of Wands", "nameZh": "權杖六", "arcana": "wands", "number": "6", "uprightMeaning": "勝利、公眾認可、成功、領導。你的努力得到了認可，享受這份成功的喜悅，並感謝支持你的人。", "reversedMeaning": "失敗、缺乏認可、自大、墜落。成功可能遭遇挫折，保持謙遜並從失敗中學習。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg" },
-  { "id": 28, "name": "Seven of Wands", "nameZh": "權杖七", "arcana": "wands", "number": "7", "uprightMeaning": "防禦、堅持、挑戰、立場。你站在高地上，面對來自四面八方的挑戰，堅守你的立場。", "reversedMeaning": "放棄、壓倒性的壓力、缺乏信心。如果感到不堪重負，評估哪些戰役值得繼續，哪些可以放手。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg" },
-  { "id": 29, "name": "Eight of Wands", "nameZh": "權杖八", "arcana": "wands", "number": "8", "uprightMeaning": "快速行動、動力、進展、好消息。事情正在快速推進，保持積極的態度，好消息將如箭飛來。", "reversedMeaning": "延遲、挫折、誤解、混亂。原本快速的進展可能遭遇阻礙，保持耐心等待時機。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg" },
-  { "id": 30, "name": "Nine of Wands", "nameZh": "權杖九", "arcana": "wands", "number": "9", "uprightMeaning": "韌性、決心、接近終點、最後的堅持。你已經走了很長的路，雖然疲憊，但終點就在眼前，堅持下去！", "reversedMeaning": "精疲力竭、固執、放棄邊緣。你可能已經筋疲力盡，允許自己休息並尋求支援。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tarot_Nine_of_Wands.jpg" },
-  { "id": 31, "name": "Ten of Wands", "nameZh": "權杖十", "arcana": "wands", "number": "10", "uprightMeaning": "重擔、責任過重、努力、臨近目標。你承擔了太多，記得學會委派工作，不必一個人扛下所有。", "reversedMeaning": "卸下重擔、委派、解脫。你正在學習放下不必要的責任，讓自己從壓力中解脫。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg" },
-  { "id": 32, "name": "Page of Wands", "nameZh": "權杖侍者", "arcana": "wands", "number": "Page", "uprightMeaning": "熱情、探索、好奇心、好消息。充滿活力的新能量正在到來，帶著開放的心迎接新的冒險。", "reversedMeaning": "缺乏方向、衝動、壞消息。熱情可能缺乏實際的方向，學習在行動前多加規劃。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg" },
-  { "id": 33, "name": "Knight of Wands", "nameZh": "權杖騎士", "arcana": "wands", "number": "Knight", "uprightMeaning": "冒險、衝動、魅力、勇敢前行。充滿熱情地追求你的目標，但記得在衝動與考慮之間取得平衡。", "reversedMeaning": "魯莽、散漫、衝動、憤怒。過於衝動可能帶來麻煩，試著在行動前稍作思考。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg" },
-  { "id": 34, "name": "Queen of Wands", "nameZh": "權杖王后", "arcana": "wands", "number": "Queen", "uprightMeaning": "自信、獨立、社交、熱情。你散發著溫暖與自信的光芒，用你的熱情感染並激勵周遭的人。", "reversedMeaning": "嫉妒、缺乏信心、依賴、自私。重新找回內心的自信，不要讓外在的比較削弱你的力量。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg" },
-  { "id": 35, "name": "King of Wands", "nameZh": "權杖國王", "arcana": "wands", "number": "King", "uprightMeaning": "領導力、願景、企業家精神、榮耀。以遠見和魅力引領他人，你的熱情將能點燃整個團隊的鬥志。", "reversedMeaning": "獨裁、衝動、傲慢、高期望。謹防因為過於強勢而讓周遭的人感到壓力，學習傾聽。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg" },
-  { "id": 36, "name": "Ace of Cups", "nameZh": "聖杯王牌", "arcana": "cups", "number": "Ace", "uprightMeaning": "新的愛情、情感的開始、直覺、靈性。一個充滿情感與愛的新開始，向宇宙的愛開放你的心。", "reversedMeaning": "情感封閉、空虛、壓抑感情。試著打開心房，允許自己感受並表達情感。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg" },
-  { "id": 37, "name": "Two of Cups", "nameZh": "聖杯二", "arcana": "cups", "number": "2", "uprightMeaning": "夥伴關係、吸引力、連結、平衡。兩個靈魂之間的美麗連結，珍惜這份相互理解與尊重的關係。", "reversedMeaning": "失衡的關係、不和諧、分離。關係中可能存在不平等，需要開誠布公地溝通。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg" },
-  { "id": 38, "name": "Three of Cups", "nameZh": "聖杯三", "arcana": "cups", "number": "3", "uprightMeaning": "慶典、友誼、社交、合作。與朋友共享喜悅的美好時刻，珍惜身邊的情誼與社群連結。", "reversedMeaning": "獨立、孤立、三角關係、過度放縱。社交活動可能過於頻繁，需要一些獨處的時間反思。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg" },
-  { "id": 39, "name": "Four of Cups", "nameZh": "聖杯四", "arcana": "cups", "number": "4", "uprightMeaning": "沉思、不滿足、冥想、重新評估。暫時退後一步，重新評估你的情況，也許有你尚未注意到的機會。", "reversedMeaning": "重新接受、行動、機會。你正從沉思中走出來，準備好接受新的可能性。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg" },
-  { "id": 40, "name": "Five of Cups", "nameZh": "聖杯五", "arcana": "cups", "number": "5", "uprightMeaning": "失落、悲傷、遺憾、後悔。允許自己為失去的事物悲傷，但也別忘了身後仍有兩個充滿的杯子。", "reversedMeaning": "接受、移動前進、原諒自己。你正在從悲傷中走出，學著放下遺憾，重新擁抱生命。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg" },
-  { "id": 41, "name": "Six of Cups", "nameZh": "聖杯六", "arcana": "cups", "number": "6", "uprightMeaning": "懷舊、童年、天真、過去的快樂。美好的回憶帶來溫暖，過去的善意正以某種形式回到你的生命中。", "reversedMeaning": "活在過去、天真、幼稚。過度沉浸於過去可能阻礙現在的成長，試著平衡懷舊與前進。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg" },
-  { "id": 42, "name": "Seven of Cups", "nameZh": "聖杯七", "arcana": "cups", "number": "7", "uprightMeaning": "幻想、選擇、幻覺、夢想。眼前有許多誘人的選項，但要仔細辨別哪些是真實的機會，哪些只是幻覺。", "reversedMeaning": "清晰、選擇、清醒的判斷。迷霧散去，你能更清楚地看到現實，做出明智的選擇。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg" },
-  { "id": 43, "name": "Eight of Cups", "nameZh": "聖杯八", "arcana": "cups", "number": "8", "uprightMeaning": "放棄、尋找更深的意義、離開、靈魂探索。勇敢地放下那些不再滋養你的事物，踏上尋找更深意義的旅程。", "reversedMeaning": "停滯、恐懼改變、無法離開。你可能因為恐懼而不願放手，試著評估留下或離去哪個對你更好。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg" },
-  { "id": 44, "name": "Nine of Cups", "nameZh": "聖杯九", "arcana": "cups", "number": "9", "uprightMeaning": "滿足、幸福、感恩、願望成真。你的願望正在實現，享受這份富足與滿足感，並對宇宙心存感激。", "reversedMeaning": "物質滿足但內心空虛、自我放縱、不滿足。外在的富足不等於內心的滿足，尋找真正讓你快樂的事物。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg" },
-  { "id": 45, "name": "Ten of Cups", "nameZh": "聖杯十", "arcana": "cups", "number": "10", "uprightMeaning": "幸福家庭、情感滿足、和諧、幸福結局。最美好的情感圓滿，與愛的人共享幸福的家庭生活。", "reversedMeaning": "家庭衝突、破碎的夢想、不和諧。即使現實與夢想有距離，繼續努力創造你心中的幸福。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg" },
-  { "id": 46, "name": "Page of Cups", "nameZh": "聖杯侍者", "arcana": "cups", "number": "Page", "uprightMeaning": "創意訊息、直覺、好奇心、情感敏感。一個充滿創意的訊息即將到來，保持開放的心接受意外的靈感。", "reversedMeaning": "情緒化、不成熟、創意受阻。情感可能過於敏感，試著以更成熟的方式處理感受。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Cups11.jpg" },
-  { "id": 47, "name": "Knight of Cups", "nameZh": "聖杯騎士", "arcana": "cups", "number": "Knight", "uprightMeaning": "浪漫、魅力、想象力、追求夢想。懷著浪漫與夢想前行，以優雅的方式追求你內心深處的渴望。", "reversedMeaning": "情緒化、不切實際、嫉妒。理想與現實之間的落差可能造成失望，嘗試更務實地追求目標。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg" },
-  { "id": 48, "name": "Queen of Cups", "nameZh": "聖杯王后", "arcana": "cups", "number": "Queen", "uprightMeaning": "情感智慧、同理心、直覺、關懷。以溫柔和同理心對待自己與他人，你的情感智慧是最大的禮物。", "reversedMeaning": "情緒不穩定、依賴、敏感過度。照顧自己的情緒健康，設立健康的界限，避免情緒淹沒自己。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg" },
-  { "id": 49, "name": "King of Cups", "nameZh": "聖杯國王", "arcana": "cups", "number": "King", "uprightMeaning": "情感成熟、外交、平衡、智慧。以成熟穩重的方式處理情感，你是情感與理智完美融合的典範。", "reversedMeaning": "情緒操縱、不穩定、壓抑。情緒可能正在暗中影響你的決定，正視並處理這些深層的感受。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg" },
-  { "id": 50, "name": "Ace of Swords", "nameZh": "寶劍王牌", "arcana": "swords", "number": "Ace", "uprightMeaning": "突破、清晰、真相、新想法。如同利劍斬破迷霧，一個清晰有力的新想法或決定正在浮現。", "reversedMeaning": "混亂、殘酷的真相、失敗。思路可能不清晰，謹防以殘忍的方式說出真相而造成傷害。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg" },
-  { "id": 51, "name": "Two of Swords", "nameZh": "寶劍二", "arcana": "swords", "number": "2", "uprightMeaning": "僵局、決定困難、否認、蒙蔽雙眼。你可能正面臨一個艱難的選擇，需要鼓起勇氣移除眼前的蒙蔽。", "reversedMeaning": "混亂、優柔寡斷、資訊過載。資訊太多可能讓你無從選擇，試著找出最重要的核心問題。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg" },
-  { "id": 52, "name": "Three of Swords", "nameZh": "寶劍三", "arcana": "swords", "number": "3", "uprightMeaning": "心碎、悲傷、痛苦、分離。允許自己感受這份痛苦，這是療癒過程中必要的一步，時間會撫慰一切。", "reversedMeaning": "復原、原諒、走出悲傷。傷口正在癒合，學習原諒自己和他人，讓心靈重新得到自由。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg" },
-  { "id": 53, "name": "Four of Swords", "nameZh": "寶劍四", "arcana": "swords", "number": "4", "uprightMeaning": "休養、恢復、靜思、需要休息。身心都需要暫時休息，給自己時間恢復能量，才能重新出發。", "reversedMeaning": "重新投入、活動、恢復元氣。休息之後，你準備好重新行動了，帶著更新的活力面對挑戰。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg" },
-  { "id": 54, "name": "Five of Swords", "nameZh": "寶劍五", "arcana": "swords", "number": "5", "uprightMeaning": "衝突、失敗、緊張、空洞的勝利。即使贏了這場戰役，代價是否值得？思考長遠的利益而非短期的勝利。", "reversedMeaning": "和解、後悔、和平談判。衝突之後的和解，尋找雙贏的方案，修復受損的關係。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg" },
-  { "id": 55, "name": "Six of Swords", "nameZh": "寶劍六", "arcana": "swords", "number": "6", "uprightMeaning": "過渡、離開、改變、平靜的旅程。你正在從動盪的時期過渡到更平靜的水域，未來將會更好。", "reversedMeaning": "抗拒改變、停滯、困境。你可能在抗拒一個必要的轉變，試著放手讓自己渡過這段過渡期。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg" },
-  { "id": 56, "name": "Seven of Swords", "nameZh": "寶劍七", "arcana": "swords", "number": "7", "uprightMeaning": "欺騙、策略、獨自行動、逃避。謹慎周遭是否有人在暗中行事，也審視自己是否有任何不誠實的行為。", "reversedMeaning": "承認過失、回歸誠信、合作。隱藏的事情開始浮出水面，誠實面對並承擔責任是最好的選擇。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg" },
-  { "id": 57, "name": "Eight of Swords", "nameZh": "寶劍八", "arcana": "swords", "number": "8", "uprightMeaning": "束縛、限制、囚禁、受害者思維。你感到被困住，但要記得，那些束縛你的繩索可能並不像你想象的那麼牢固。", "reversedMeaning": "解脫、自我釋放、掌控。你正在打破自我設限的枷鎖，重新發現自己的力量與選擇。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg" },
-  { "id": 58, "name": "Nine of Swords", "nameZh": "寶劍九", "arcana": "swords", "number": "9", "uprightMeaning": "焦慮、惡夢、恐懼、絕望。深夜的恐懼和焦慮正在困擾你，試著尋求支持，這些恐懼往往大於現實。", "reversedMeaning": "走出黑暗、面對恐懼、尋求幫助。你正在勇敢地面對自己的恐懼，走出黑暗的力量就在你心中。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg" },
-  { "id": 59, "name": "Ten of Swords", "nameZh": "寶劍十", "arcana": "swords", "number": "10", "uprightMeaning": "痛苦的結束、背叛、失敗、必要的終結。雖然這是一個痛苦的終點，但天空已開始破曉，新的開始即將來臨。", "reversedMeaning": "復甦、再生、抗拒不可避免的結局。從痛苦中慢慢恢復，你比你想象的更加堅強。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Swords10.jpg" },
-  { "id": 60, "name": "Page of Swords", "nameZh": "寶劍侍者", "arcana": "swords", "number": "Page", "uprightMeaning": "好奇心、敏銳、新想法、溝通。帶著敏銳的觀察力和求知慾探索新事物，但說話前先思考。", "reversedMeaning": "多嘴、說話不經思考、殘忍。言語可能在無意中傷害他人，三思而後言。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg" },
-  { "id": 61, "name": "Knight of Swords", "nameZh": "寶劍騎士", "arcana": "swords", "number": "Knight", "uprightMeaning": "野心、行動力、直接、勇敢。以無所畏懼的勇氣直衝目標，但記得在衝鋒前也要觀察全局。", "reversedMeaning": "魯莽、衝動、殘忍、失控。過於衝動可能帶來破壞，暫停下來重新評估你的行動。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg" },
-  { "id": 62, "name": "Queen of Swords", "nameZh": "寶劍王后", "arcana": "swords", "number": "Queen", "uprightMeaning": "思維清晰、直接、獨立、敏銳。以清晰的思維和直接的方式面對現實，你的智慧是你最強大的武器。", "reversedMeaning": "冷漠、殘忍、偏見、情緒化。謹防因為過於冷酷而傷害了真正關心你的人，保持理智但也要有溫度。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg" },
-  { "id": 63, "name": "King of Swords", "nameZh": "寶劍國王", "arcana": "swords", "number": "King", "uprightMeaning": "智識權威、道德、清晰思維、真相。以智慧和公正引領他人，真相和道德是你行事的最高準則。", "reversedMeaning": "操縱、殘忍、冷酷、不道德。智識若被用於操縱，將帶來嚴重的後果，謹守道德底線。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg" },
-  { "id": 64, "name": "Ace of Pentacles", "nameZh": "五角星王牌", "arcana": "pentacles", "number": "Ace", "uprightMeaning": "物質機會、財富、豐盛、新的財務開始。一個充滿物質潛力的新機會即將到來，把握這份繁榮的種子。", "reversedMeaning": "錯失機會、缺乏計畫、貪婪。物質上的機會可能因為準備不足而錯失，現在開始規劃。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Pents01.jpg" },
-  { "id": 65, "name": "Two of Pentacles", "nameZh": "五角星二", "arcana": "pentacles", "number": "2", "uprightMeaning": "平衡、適應力、時間管理、優先順序。你正在雜耍多個責任，保持靈活與幽默，找到屬於你的平衡。", "reversedMeaning": "失衡、過度承諾、財務困難。目前承擔的事情可能太多，學習說不並設立優先順序。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Pents02.jpg" },
-  { "id": 66, "name": "Three of Pentacles", "nameZh": "五角星三", "arcana": "pentacles", "number": "3", "uprightMeaning": "合作、學習、技能、團隊合作。與他人合作能創造出比個人更偉大的成果，珍視每個人帶來的貢獻。", "reversedMeaning": "缺乏合作、衝突、孤立工作。團隊合作可能出現問題，需要更開放的溝通來重建合作關係。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg" },
-  { "id": 67, "name": "Four of Pentacles", "nameZh": "五角星四", "arcana": "pentacles", "number": "4", "uprightMeaning": "保守、穩定、安全感、持有。審慎地管理你的資源，但也要注意，過度的保守可能阻礙你的成長。", "reversedMeaning": "揮霍、放手、慷慨、財務不安全。在節儉與慷慨之間找到平衡，財富是用來流動的。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pents04.jpg" },
-  { "id": 68, "name": "Five of Pentacles", "nameZh": "五角星五", "arcana": "pentacles", "number": "5", "uprightMeaning": "財務困難、貧困、絕望、被排除在外。艱難的時期考驗你的韌性，記得尋求幫助，你並不孤單。", "reversedMeaning": "走出困境、改善、接受幫助。困難時期正在過去，勇敢地接受他人的幫助和善意。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pents05.jpg" },
-  { "id": 69, "name": "Six of Pentacles", "nameZh": "五角星六", "arcana": "pentacles", "number": "6", "uprightMeaning": "給予、接受、慷慨、社區。財富在流通中增值，慷慨地分享你的豐盛，也優雅地接受他人的好意。", "reversedMeaning": "自私、欠債、單方面的給予。給予與接受之間是否失衡？確保關係中的能量流動是對等的。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pents06.jpg" },
-  { "id": 70, "name": "Seven of Pentacles", "nameZh": "五角星七", "arcana": "pentacles", "number": "7", "uprightMeaning": "耐心、長期投資、評估、收穫。你的努力需要時間才能看到結果，保持耐心，豐收的時刻終將到來。", "reversedMeaning": "缺乏長遠規劃、放棄、急功近利。短期思維可能讓你錯失長期的豐收，重新規劃你的長期目標。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pents07.jpg" },
-  { "id": 71, "name": "Eight of Pentacles", "nameZh": "五角星八", "arcana": "pentacles", "number": "8", "uprightMeaning": "勤奮、技能發展、專注、匠人精神。專注且持續地精進你的技藝，每一次的練習都讓你更接近精通。", "reversedMeaning": "缺乏專注、敷衍了事、沒有目標感。重新找回對工作的熱情與專注，品質勝於數量。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg" },
-  { "id": 72, "name": "Nine of Pentacles", "nameZh": "五角星九", "arcana": "pentacles", "number": "9", "uprightMeaning": "富足、獨立、自我滿足、豪華。你通過自己的努力創造了豐盛的生活，享受這份優雅的獨立與成就。", "reversedMeaning": "過度工作、財務倒退、依賴。確保你的財務獨立建立在穩固的基礎上，避免過度依賴他人。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Pents09.jpg" },
-  { "id": 73, "name": "Ten of Pentacles", "nameZh": "五角星十", "arcana": "pentacles", "number": "10", "uprightMeaning": "長久財富、家族遺產、傳承、圓滿。物質上的最大圓滿，建立能夠傳承後代的穩固基礎與家族財富。", "reversedMeaning": "家族衝突、財務失敗、孤立。家族中可能存在關於財產或遺產的衝突，需要開誠布公地溝通解決。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents10.jpg" },
-  { "id": 74, "name": "Page of Pentacles", "nameZh": "五角星侍者", "arcana": "pentacles", "number": "Page", "uprightMeaning": "抱負、新的物質機會、學習、計畫。帶著認真與好奇心學習新技能，務實的態度將幫助你抓住機會。", "reversedMeaning": "缺乏進展、懶散、學習態度差。重新找回對學習和成長的動力，打好基礎才能建造高樓。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pents11.jpg" },
-  { "id": 75, "name": "Knight of Pentacles", "nameZh": "五角星騎士", "arcana": "pentacles", "number": "Knight", "uprightMeaning": "努力工作、可靠、謹慎、堅持。以穩定且踏實的步伐前進，你的可靠性是最寶貴的資產。", "reversedMeaning": "停滯、完美主義、懶惰。過度追求完美可能導致停滯不前，接受「夠好」並繼續前進。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pents12.jpg" },
-  { "id": 76, "name": "Queen of Pentacles", "nameZh": "五角星王后", "arcana": "pentacles", "number": "Queen", "uprightMeaning": "滋養、務實、舒適、財務安全。以務實和溫暖的態度照顧自己和他人，創造一個安全、豐盛的環境。", "reversedMeaning": "自我放縱、財務不安全、嫉妒。物質上的焦慮可能影響你的判斷，回歸務實和感恩的心態。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pents13.jpg" },
-  { "id": 77, "name": "King of Pentacles", "nameZh": "五角星國王", "arcana": "pentacles", "number": "King", "uprightMeaning": "財富、商業、領導力、安全感。你是物質領域的大師，以智慧和穩健創造持久的財富與影響力。", "reversedMeaning": "腐敗、貪婪、物質主義、固執。財富若被執念所掌控將帶來痛苦，記得金錢是工具而非目的。", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg" }
+  {
+    "id": 22,
+    "name": "Ace of Wands",
+    "nameZh": "權杖王牌",
+    "arcana": "wands",
+    "number": "Ace",
+    "uprightMeaning": "新的靈感、創業精神、成長潛力。一股強大的創造力正在萌發，抓住這份衝動並付諸行動。",
+    "reversedMeaning": "創意受阻、延遲、缺乏動力。靈感似乎被什麼卡住了，試著換個環境或角度重新激發熱情。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg",
+    "filename": "ace-wands.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Two of Wands",
+    "nameZh": "權杖二",
+    "arcana": "wands",
+    "number": "2",
+    "uprightMeaning": "規劃、未來願景、擴展。你正站在高處俯瞰廣闊的未來，是時候制定計畫並勇敢前行。",
+    "reversedMeaning": "恐懼未知、缺乏計畫、舒適圈。你可能因為害怕未知而不願踏出舒適圈，鼓起勇氣邁出第一步。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg",
+    "filename": "two-wands.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Three of Wands",
+    "nameZh": "權杖三",
+    "arcana": "wands",
+    "number": "3",
+    "uprightMeaning": "擴張、預見、機會即將到來。你的船隊正在歸航，等待中充滿了期待與希望，好消息即將到來。",
+    "reversedMeaning": "延誤、缺乏遠見、挫折。計畫可能遭遇阻礙，保持耐心並調整策略以適應新的情況。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg",
+    "filename": "three-wands.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Four of Wands",
+    "nameZh": "權杖四",
+    "arcana": "wands",
+    "number": "4",
+    "uprightMeaning": "慶典、穩定、家庭、里程碑。值得慶祝的時刻！與你愛的人分享這份喜悅，享受努力帶來的成果。",
+    "reversedMeaning": "缺乏支持、家庭衝突、不穩定。家庭或群體中可能存在緊張局勢，需要溝通與理解來化解。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg",
+    "filename": "four-wands.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Five of Wands",
+    "nameZh": "權杖五",
+    "arcana": "wands",
+    "number": "5",
+    "uprightMeaning": "衝突、競爭、分歧、挑戰。面對多方意見的衝突，保持冷靜，從競爭中找到成長的機會。",
+    "reversedMeaning": "避免衝突、解決紛爭、內部競爭。衝突正在緩解，尋求共識與合作，讓事情重回正軌。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg",
+    "filename": "five-wands.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Six of Wands",
+    "nameZh": "權杖六",
+    "arcana": "wands",
+    "number": "6",
+    "uprightMeaning": "勝利、公眾認可、成功、領導。你的努力得到了認可，享受這份成功的喜悅，並感謝支持你的人。",
+    "reversedMeaning": "失敗、缺乏認可、自大、墜落。成功可能遭遇挫折，保持謙遜並從失敗中學習。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg",
+    "filename": "six-wands.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Seven of Wands",
+    "nameZh": "權杖七",
+    "arcana": "wands",
+    "number": "7",
+    "uprightMeaning": "防禦、堅持、挑戰、立場。你站在高地上，面對來自四面八方的挑戰，堅守你的立場。",
+    "reversedMeaning": "放棄、壓倒性的壓力、缺乏信心。如果感到不堪重負，評估哪些戰役值得繼續，哪些可以放手。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg",
+    "filename": "seven-wands.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Eight of Wands",
+    "nameZh": "權杖八",
+    "arcana": "wands",
+    "number": "8",
+    "uprightMeaning": "快速行動、動力、進展、好消息。事情正在快速推進，保持積極的態度，好消息將如箭飛來。",
+    "reversedMeaning": "延遲、挫折、誤解、混亂。原本快速的進展可能遭遇阻礙，保持耐心等待時機。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg",
+    "filename": "eight-wands.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Nine of Wands",
+    "nameZh": "權杖九",
+    "arcana": "wands",
+    "number": "9",
+    "uprightMeaning": "韌性、決心、接近終點、最後的堅持。你已經走了很長的路，雖然疲憊，但終點就在眼前，堅持下去！",
+    "reversedMeaning": "精疲力竭、固執、放棄邊緣。你可能已經筋疲力盡，允許自己休息並尋求支援。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Tarot_Nine_of_Wands.jpg",
+    "filename": "nine-wands.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Ten of Wands",
+    "nameZh": "權杖十",
+    "arcana": "wands",
+    "number": "10",
+    "uprightMeaning": "重擔、責任過重、努力、臨近目標。你承擔了太多，記得學會委派工作，不必一個人扛下所有。",
+    "reversedMeaning": "卸下重擔、委派、解脫。你正在學習放下不必要的責任，讓自己從壓力中解脫。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg",
+    "filename": "ten-wands.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Page of Wands",
+    "nameZh": "權杖侍者",
+    "arcana": "wands",
+    "number": "Page",
+    "uprightMeaning": "熱情、探索、好奇心、好消息。充滿活力的新能量正在到來，帶著開放的心迎接新的冒險。",
+    "reversedMeaning": "缺乏方向、衝動、壞消息。熱情可能缺乏實際的方向，學習在行動前多加規劃。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg",
+    "filename": "page-wands.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Knight of Wands",
+    "nameZh": "權杖騎士",
+    "arcana": "wands",
+    "number": "Knight",
+    "uprightMeaning": "冒險、衝動、魅力、勇敢前行。充滿熱情地追求你的目標，但記得在衝動與考慮之間取得平衡。",
+    "reversedMeaning": "魯莽、散漫、衝動、憤怒。過於衝動可能帶來麻煩，試著在行動前稍作思考。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg",
+    "filename": "knight-wands.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Queen of Wands",
+    "nameZh": "權杖王后",
+    "arcana": "wands",
+    "number": "Queen",
+    "uprightMeaning": "自信、獨立、社交、熱情。你散發著溫暖與自信的光芒，用你的熱情感染並激勵周遭的人。",
+    "reversedMeaning": "嫉妒、缺乏信心、依賴、自私。重新找回內心的自信，不要讓外在的比較削弱你的力量。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg",
+    "filename": "queen-wands.jpg"
+  },
+  {
+    "id": 35,
+    "name": "King of Wands",
+    "nameZh": "權杖國王",
+    "arcana": "wands",
+    "number": "King",
+    "uprightMeaning": "領導力、願景、企業家精神、榮耀。以遠見和魅力引領他人，你的熱情將能點燃整個團隊的鬥志。",
+    "reversedMeaning": "獨裁、衝動、傲慢、高期望。謹防因為過於強勢而讓周遭的人感到壓力，學習傾聽。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg",
+    "filename": "king-wands.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Ace of Cups",
+    "nameZh": "聖杯王牌",
+    "arcana": "cups",
+    "number": "Ace",
+    "uprightMeaning": "新的愛情、情感的開始、直覺、靈性。一個充滿情感與愛的新開始，向宇宙的愛開放你的心。",
+    "reversedMeaning": "情感封閉、空虛、壓抑感情。試著打開心房，允許自己感受並表達情感。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg",
+    "filename": "ace-cups.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Two of Cups",
+    "nameZh": "聖杯二",
+    "arcana": "cups",
+    "number": "2",
+    "uprightMeaning": "夥伴關係、吸引力、連結、平衡。兩個靈魂之間的美麗連結，珍惜這份相互理解與尊重的關係。",
+    "reversedMeaning": "失衡的關係、不和諧、分離。關係中可能存在不平等，需要開誠布公地溝通。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg",
+    "filename": "two-cups.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Three of Cups",
+    "nameZh": "聖杯三",
+    "arcana": "cups",
+    "number": "3",
+    "uprightMeaning": "慶典、友誼、社交、合作。與朋友共享喜悅的美好時刻，珍惜身邊的情誼與社群連結。",
+    "reversedMeaning": "獨立、孤立、三角關係、過度放縱。社交活動可能過於頻繁，需要一些獨處的時間反思。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg",
+    "filename": "three-cups.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Four of Cups",
+    "nameZh": "聖杯四",
+    "arcana": "cups",
+    "number": "4",
+    "uprightMeaning": "沉思、不滿足、冥想、重新評估。暫時退後一步，重新評估你的情況，也許有你尚未注意到的機會。",
+    "reversedMeaning": "重新接受、行動、機會。你正從沉思中走出來，準備好接受新的可能性。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg",
+    "filename": "four-cups.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Five of Cups",
+    "nameZh": "聖杯五",
+    "arcana": "cups",
+    "number": "5",
+    "uprightMeaning": "失落、悲傷、遺憾、後悔。允許自己為失去的事物悲傷，但也別忘了身後仍有兩個充滿的杯子。",
+    "reversedMeaning": "接受、移動前進、原諒自己。你正在從悲傷中走出，學著放下遺憾，重新擁抱生命。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg",
+    "filename": "five-cups.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Six of Cups",
+    "nameZh": "聖杯六",
+    "arcana": "cups",
+    "number": "6",
+    "uprightMeaning": "懷舊、童年、天真、過去的快樂。美好的回憶帶來溫暖，過去的善意正以某種形式回到你的生命中。",
+    "reversedMeaning": "活在過去、天真、幼稚。過度沉浸於過去可能阻礙現在的成長，試著平衡懷舊與前進。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg",
+    "filename": "six-cups.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Seven of Cups",
+    "nameZh": "聖杯七",
+    "arcana": "cups",
+    "number": "7",
+    "uprightMeaning": "幻想、選擇、幻覺、夢想。眼前有許多誘人的選項，但要仔細辨別哪些是真實的機會，哪些只是幻覺。",
+    "reversedMeaning": "清晰、選擇、清醒的判斷。迷霧散去，你能更清楚地看到現實，做出明智的選擇。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg",
+    "filename": "seven-cups.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Eight of Cups",
+    "nameZh": "聖杯八",
+    "arcana": "cups",
+    "number": "8",
+    "uprightMeaning": "放棄、尋找更深的意義、離開、靈魂探索。勇敢地放下那些不再滋養你的事物，踏上尋找更深意義的旅程。",
+    "reversedMeaning": "停滯、恐懼改變、無法離開。你可能因為恐懼而不願放手，試著評估留下或離去哪個對你更好。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg",
+    "filename": "eight-cups.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Nine of Cups",
+    "nameZh": "聖杯九",
+    "arcana": "cups",
+    "number": "9",
+    "uprightMeaning": "滿足、幸福、感恩、願望成真。你的願望正在實現，享受這份富足與滿足感，並對宇宙心存感激。",
+    "reversedMeaning": "物質滿足但內心空虛、自我放縱、不滿足。外在的富足不等於內心的滿足，尋找真正讓你快樂的事物。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg",
+    "filename": "nine-cups.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Ten of Cups",
+    "nameZh": "聖杯十",
+    "arcana": "cups",
+    "number": "10",
+    "uprightMeaning": "幸福家庭、情感滿足、和諧、幸福結局。最美好的情感圓滿，與愛的人共享幸福的家庭生活。",
+    "reversedMeaning": "家庭衝突、破碎的夢想、不和諧。即使現實與夢想有距離，繼續努力創造你心中的幸福。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg",
+    "filename": "ten-cups.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Page of Cups",
+    "nameZh": "聖杯侍者",
+    "arcana": "cups",
+    "number": "Page",
+    "uprightMeaning": "創意訊息、直覺、好奇心、情感敏感。一個充滿創意的訊息即將到來，保持開放的心接受意外的靈感。",
+    "reversedMeaning": "情緒化、不成熟、創意受阻。情感可能過於敏感，試著以更成熟的方式處理感受。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Cups11.jpg",
+    "filename": "page-cups.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Knight of Cups",
+    "nameZh": "聖杯騎士",
+    "arcana": "cups",
+    "number": "Knight",
+    "uprightMeaning": "浪漫、魅力、想象力、追求夢想。懷著浪漫與夢想前行，以優雅的方式追求你內心深處的渴望。",
+    "reversedMeaning": "情緒化、不切實際、嫉妒。理想與現實之間的落差可能造成失望，嘗試更務實地追求目標。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg",
+    "filename": "knight-cups.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Queen of Cups",
+    "nameZh": "聖杯王后",
+    "arcana": "cups",
+    "number": "Queen",
+    "uprightMeaning": "情感智慧、同理心、直覺、關懷。以溫柔和同理心對待自己與他人，你的情感智慧是最大的禮物。",
+    "reversedMeaning": "情緒不穩定、依賴、敏感過度。照顧自己的情緒健康，設立健康的界限，避免情緒淹沒自己。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg",
+    "filename": "queen-cups.jpg"
+  },
+  {
+    "id": 49,
+    "name": "King of Cups",
+    "nameZh": "聖杯國王",
+    "arcana": "cups",
+    "number": "King",
+    "uprightMeaning": "情感成熟、外交、平衡、智慧。以成熟穩重的方式處理情感，你是情感與理智完美融合的典範。",
+    "reversedMeaning": "情緒操縱、不穩定、壓抑。情緒可能正在暗中影響你的決定，正視並處理這些深層的感受。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg",
+    "filename": "king-cups.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Ace of Swords",
+    "nameZh": "寶劍王牌",
+    "arcana": "swords",
+    "number": "Ace",
+    "uprightMeaning": "突破、清晰、真相、新想法。如同利劍斬破迷霧，一個清晰有力的新想法或決定正在浮現。",
+    "reversedMeaning": "混亂、殘酷的真相、失敗。思路可能不清晰，謹防以殘忍的方式說出真相而造成傷害。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg",
+    "filename": "ace-swords.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Two of Swords",
+    "nameZh": "寶劍二",
+    "arcana": "swords",
+    "number": "2",
+    "uprightMeaning": "僵局、決定困難、否認、蒙蔽雙眼。你可能正面臨一個艱難的選擇，需要鼓起勇氣移除眼前的蒙蔽。",
+    "reversedMeaning": "混亂、優柔寡斷、資訊過載。資訊太多可能讓你無從選擇，試著找出最重要的核心問題。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg",
+    "filename": "two-swords.jpg"
+  },
+  {
+    "id": 52,
+    "name": "Three of Swords",
+    "nameZh": "寶劍三",
+    "arcana": "swords",
+    "number": "3",
+    "uprightMeaning": "心碎、悲傷、痛苦、分離。允許自己感受這份痛苦，這是療癒過程中必要的一步，時間會撫慰一切。",
+    "reversedMeaning": "復原、原諒、走出悲傷。傷口正在癒合，學習原諒自己和他人，讓心靈重新得到自由。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg",
+    "filename": "three-swords.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Four of Swords",
+    "nameZh": "寶劍四",
+    "arcana": "swords",
+    "number": "4",
+    "uprightMeaning": "休養、恢復、靜思、需要休息。身心都需要暫時休息，給自己時間恢復能量，才能重新出發。",
+    "reversedMeaning": "重新投入、活動、恢復元氣。休息之後，你準備好重新行動了，帶著更新的活力面對挑戰。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg",
+    "filename": "four-swords.jpg"
+  },
+  {
+    "id": 54,
+    "name": "Five of Swords",
+    "nameZh": "寶劍五",
+    "arcana": "swords",
+    "number": "5",
+    "uprightMeaning": "衝突、失敗、緊張、空洞的勝利。即使贏了這場戰役，代價是否值得？思考長遠的利益而非短期的勝利。",
+    "reversedMeaning": "和解、後悔、和平談判。衝突之後的和解，尋找雙贏的方案，修復受損的關係。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg",
+    "filename": "five-swords.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Six of Swords",
+    "nameZh": "寶劍六",
+    "arcana": "swords",
+    "number": "6",
+    "uprightMeaning": "過渡、離開、改變、平靜的旅程。你正在從動盪的時期過渡到更平靜的水域，未來將會更好。",
+    "reversedMeaning": "抗拒改變、停滯、困境。你可能在抗拒一個必要的轉變，試著放手讓自己渡過這段過渡期。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg",
+    "filename": "six-swords.jpg"
+  },
+  {
+    "id": 56,
+    "name": "Seven of Swords",
+    "nameZh": "寶劍七",
+    "arcana": "swords",
+    "number": "7",
+    "uprightMeaning": "欺騙、策略、獨自行動、逃避。謹慎周遭是否有人在暗中行事，也審視自己是否有任何不誠實的行為。",
+    "reversedMeaning": "承認過失、回歸誠信、合作。隱藏的事情開始浮出水面，誠實面對並承擔責任是最好的選擇。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg",
+    "filename": "seven-swords.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Eight of Swords",
+    "nameZh": "寶劍八",
+    "arcana": "swords",
+    "number": "8",
+    "uprightMeaning": "束縛、限制、囚禁、受害者思維。你感到被困住，但要記得，那些束縛你的繩索可能並不像你想象的那麼牢固。",
+    "reversedMeaning": "解脫、自我釋放、掌控。你正在打破自我設限的枷鎖，重新發現自己的力量與選擇。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg",
+    "filename": "eight-swords.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Nine of Swords",
+    "nameZh": "寶劍九",
+    "arcana": "swords",
+    "number": "9",
+    "uprightMeaning": "焦慮、惡夢、恐懼、絕望。深夜的恐懼和焦慮正在困擾你，試著尋求支持，這些恐懼往往大於現實。",
+    "reversedMeaning": "走出黑暗、面對恐懼、尋求幫助。你正在勇敢地面對自己的恐懼，走出黑暗的力量就在你心中。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg",
+    "filename": "nine-swords.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Ten of Swords",
+    "nameZh": "寶劍十",
+    "arcana": "swords",
+    "number": "10",
+    "uprightMeaning": "痛苦的結束、背叛、失敗、必要的終結。雖然這是一個痛苦的終點，但天空已開始破曉，新的開始即將來臨。",
+    "reversedMeaning": "復甦、再生、抗拒不可避免的結局。從痛苦中慢慢恢復，你比你想象的更加堅強。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Swords10.jpg",
+    "filename": "ten-swords.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Page of Swords",
+    "nameZh": "寶劍侍者",
+    "arcana": "swords",
+    "number": "Page",
+    "uprightMeaning": "好奇心、敏銳、新想法、溝通。帶著敏銳的觀察力和求知慾探索新事物，但說話前先思考。",
+    "reversedMeaning": "多嘴、說話不經思考、殘忍。言語可能在無意中傷害他人，三思而後言。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg",
+    "filename": "page-swords.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Knight of Swords",
+    "nameZh": "寶劍騎士",
+    "arcana": "swords",
+    "number": "Knight",
+    "uprightMeaning": "野心、行動力、直接、勇敢。以無所畏懼的勇氣直衝目標，但記得在衝鋒前也要觀察全局。",
+    "reversedMeaning": "魯莽、衝動、殘忍、失控。過於衝動可能帶來破壞，暫停下來重新評估你的行動。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg",
+    "filename": "knight-swords.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Queen of Swords",
+    "nameZh": "寶劍王后",
+    "arcana": "swords",
+    "number": "Queen",
+    "uprightMeaning": "思維清晰、直接、獨立、敏銳。以清晰的思維和直接的方式面對現實，你的智慧是你最強大的武器。",
+    "reversedMeaning": "冷漠、殘忍、偏見、情緒化。謹防因為過於冷酷而傷害了真正關心你的人，保持理智但也要有溫度。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg",
+    "filename": "queen-swords.jpg"
+  },
+  {
+    "id": 63,
+    "name": "King of Swords",
+    "nameZh": "寶劍國王",
+    "arcana": "swords",
+    "number": "King",
+    "uprightMeaning": "智識權威、道德、清晰思維、真相。以智慧和公正引領他人，真相和道德是你行事的最高準則。",
+    "reversedMeaning": "操縱、殘忍、冷酷、不道德。智識若被用於操縱，將帶來嚴重的後果，謹守道德底線。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg",
+    "filename": "king-swords.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Ace of Pentacles",
+    "nameZh": "五角星王牌",
+    "arcana": "pentacles",
+    "number": "Ace",
+    "uprightMeaning": "物質機會、財富、豐盛、新的財務開始。一個充滿物質潛力的新機會即將到來，把握這份繁榮的種子。",
+    "reversedMeaning": "錯失機會、缺乏計畫、貪婪。物質上的機會可能因為準備不足而錯失，現在開始規劃。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Pents01.jpg",
+    "filename": "ace-pentacles.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Two of Pentacles",
+    "nameZh": "五角星二",
+    "arcana": "pentacles",
+    "number": "2",
+    "uprightMeaning": "平衡、適應力、時間管理、優先順序。你正在雜耍多個責任，保持靈活與幽默，找到屬於你的平衡。",
+    "reversedMeaning": "失衡、過度承諾、財務困難。目前承擔的事情可能太多，學習說不並設立優先順序。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Pents02.jpg",
+    "filename": "two-pentacles.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Three of Pentacles",
+    "nameZh": "五角星三",
+    "arcana": "pentacles",
+    "number": "3",
+    "uprightMeaning": "合作、學習、技能、團隊合作。與他人合作能創造出比個人更偉大的成果，珍視每個人帶來的貢獻。",
+    "reversedMeaning": "缺乏合作、衝突、孤立工作。團隊合作可能出現問題，需要更開放的溝通來重建合作關係。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg",
+    "filename": "three-pentacles.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Four of Pentacles",
+    "nameZh": "五角星四",
+    "arcana": "pentacles",
+    "number": "4",
+    "uprightMeaning": "保守、穩定、安全感、持有。審慎地管理你的資源，但也要注意，過度的保守可能阻礙你的成長。",
+    "reversedMeaning": "揮霍、放手、慷慨、財務不安全。在節儉與慷慨之間找到平衡，財富是用來流動的。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pents04.jpg",
+    "filename": "four-pentacles.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Five of Pentacles",
+    "nameZh": "五角星五",
+    "arcana": "pentacles",
+    "number": "5",
+    "uprightMeaning": "財務困難、貧困、絕望、被排除在外。艱難的時期考驗你的韌性，記得尋求幫助，你並不孤單。",
+    "reversedMeaning": "走出困境、改善、接受幫助。困難時期正在過去，勇敢地接受他人的幫助和善意。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pents05.jpg",
+    "filename": "five-pentacles.jpg"
+  },
+  {
+    "id": 69,
+    "name": "Six of Pentacles",
+    "nameZh": "五角星六",
+    "arcana": "pentacles",
+    "number": "6",
+    "uprightMeaning": "給予、接受、慷慨、社區。財富在流通中增值，慷慨地分享你的豐盛，也優雅地接受他人的好意。",
+    "reversedMeaning": "自私、欠債、單方面的給予。給予與接受之間是否失衡？確保關係中的能量流動是對等的。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pents06.jpg",
+    "filename": "six-pentacles.jpg"
+  },
+  {
+    "id": 70,
+    "name": "Seven of Pentacles",
+    "nameZh": "五角星七",
+    "arcana": "pentacles",
+    "number": "7",
+    "uprightMeaning": "耐心、長期投資、評估、收穫。你的努力需要時間才能看到結果，保持耐心，豐收的時刻終將到來。",
+    "reversedMeaning": "缺乏長遠規劃、放棄、急功近利。短期思維可能讓你錯失長期的豐收，重新規劃你的長期目標。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pents07.jpg",
+    "filename": "seven-pentacles.jpg"
+  },
+  {
+    "id": 71,
+    "name": "Eight of Pentacles",
+    "nameZh": "五角星八",
+    "arcana": "pentacles",
+    "number": "8",
+    "uprightMeaning": "勤奮、技能發展、專注、匠人精神。專注且持續地精進你的技藝，每一次的練習都讓你更接近精通。",
+    "reversedMeaning": "缺乏專注、敷衍了事、沒有目標感。重新找回對工作的熱情與專注，品質勝於數量。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg",
+    "filename": "eight-pentacles.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Nine of Pentacles",
+    "nameZh": "五角星九",
+    "arcana": "pentacles",
+    "number": "9",
+    "uprightMeaning": "富足、獨立、自我滿足、豪華。你通過自己的努力創造了豐盛的生活，享受這份優雅的獨立與成就。",
+    "reversedMeaning": "過度工作、財務倒退、依賴。確保你的財務獨立建立在穩固的基礎上，避免過度依賴他人。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Pents09.jpg",
+    "filename": "nine-pentacles.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Ten of Pentacles",
+    "nameZh": "五角星十",
+    "arcana": "pentacles",
+    "number": "10",
+    "uprightMeaning": "長久財富、家族遺產、傳承、圓滿。物質上的最大圓滿，建立能夠傳承後代的穩固基礎與家族財富。",
+    "reversedMeaning": "家族衝突、財務失敗、孤立。家族中可能存在關於財產或遺產的衝突，需要開誠布公地溝通解決。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents10.jpg",
+    "filename": "ten-pentacles.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Page of Pentacles",
+    "nameZh": "五角星侍者",
+    "arcana": "pentacles",
+    "number": "Page",
+    "uprightMeaning": "抱負、新的物質機會、學習、計畫。帶著認真與好奇心學習新技能，務實的態度將幫助你抓住機會。",
+    "reversedMeaning": "缺乏進展、懶散、學習態度差。重新找回對學習和成長的動力，打好基礎才能建造高樓。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pents11.jpg",
+    "filename": "page-pentacles.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Knight of Pentacles",
+    "nameZh": "五角星騎士",
+    "arcana": "pentacles",
+    "number": "Knight",
+    "uprightMeaning": "努力工作、可靠、謹慎、堅持。以穩定且踏實的步伐前進，你的可靠性是最寶貴的資產。",
+    "reversedMeaning": "停滯、完美主義、懶惰。過度追求完美可能導致停滯不前，接受「夠好」並繼續前進。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pents12.jpg",
+    "filename": "knight-pentacles.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Queen of Pentacles",
+    "nameZh": "五角星王后",
+    "arcana": "pentacles",
+    "number": "Queen",
+    "uprightMeaning": "滋養、務實、舒適、財務安全。以務實和溫暖的態度照顧自己和他人，創造一個安全、豐盛的環境。",
+    "reversedMeaning": "自我放縱、財務不安全、嫉妒。物質上的焦慮可能影響你的判斷，回歸務實和感恩的心態。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pents13.jpg",
+    "filename": "queen-pentacles.jpg"
+  },
+  {
+    "id": 77,
+    "name": "King of Pentacles",
+    "nameZh": "五角星國王",
+    "arcana": "pentacles",
+    "number": "King",
+    "uprightMeaning": "財富、商業、領導力、安全感。你是物質領域的大師，以智慧和穩健創造持久的財富與影響力。",
+    "reversedMeaning": "腐敗、貪婪、物質主義、固執。財富若被執念所掌控將帶來痛苦，記得金錢是工具而非目的。",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg",
+    "filename": "king-pentacles.jpg"
+  }
 ]
