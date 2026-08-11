@@ -22,20 +22,22 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
     const options = parseOptions(input);
     const result = shuffle(options);
 
-    const embed = new EmbedBuilder()
-      .setColor(0x8B5CF6)
-      .setTitle('🔀 洗牌完成！')
-      .addFields({
-        name: '📋 新順序',
-        value: result.display,
-        inline: false,
-      })
-      .setFooter({ text: `${options.length} 個選項　由 ${interaction.user.displayName} 發起` })
-      .setTimestamp();
+    const embed = buildShuffleEmbed(result.shuffled, interaction.user.displayName);
 
     await interaction.reply({ embeds: [embed] });
   } catch (error) {
     const message = error instanceof Error ? error.message : '未知錯誤';
     await interaction.reply({ content: message, ephemeral: true });
   }
+}
+
+export function buildShuffleEmbed(shuffledOptions: string[], userName: string): EmbedBuilder {
+  const arrowDisplay = shuffledOptions.join(' ➔ ');
+
+  return new EmbedBuilder()
+    .setColor(0x8B5CF6)
+    .setTitle('🔀 隨機排序')
+    .setDescription(`## ${arrowDisplay}`)
+    .setFooter({ text: `${shuffledOptions.length} 個選項 ‧ 由 ${userName} 發起` })
+    .setTimestamp();
 }

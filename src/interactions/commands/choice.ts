@@ -7,7 +7,7 @@ import { parseOptions, pick } from '../../services/ChoiceService.js';
 
 export const data = new SlashCommandBuilder()
   .setName('choice')
-  .setDescription('🎯 隨機抽一個選項 (例如: 壽司 披薩 漢堡)')
+  .setDescription('隨機抽一個選項 (例如: 壽司 披薩 漢堡)')
   .addStringOption(opt =>
     opt
       .setName('選項')
@@ -32,13 +32,16 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
 }
 
 export function buildChoiceEmbed(picked: string, options: string[], userName: string): EmbedBuilder {
+  const optionsText = options.join(' ');
+
   return new EmbedBuilder()
     .setColor(0xF59E0B)
     .setTitle('隨機')
     .setDescription(
-      `### 👉 ${picked}\n\n` +
+      `## 👉 ${picked}\n\n` +
       `**選項**\n` +
-      `${options.join(' ')}`
+      `\`\`\`\n${optionsText}\n\`\`\``
     )
-    .setFooter({ text: `由 ${userName} 發起` });
+    .setFooter({ text: `${options.length} 個選項 由 ${userName} 發起` })
+    .setTimestamp();
 }

@@ -191,16 +191,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const options = parseOptions(rawOptions);
       const result = shuffle(options);
 
-      const embed = new EmbedBuilder()
-        .setColor(0x8B5CF6)
-        .setTitle('🔀 洗牌完成！')
-        .addFields({
-          name: '📋 新順序',
-          value: result.display,
-          inline: false,
-        })
-        .setFooter({ text: `${options.length} 個選項　由 ${message.author.displayName} 發起` })
-        .setTimestamp();
+      const embed = shuffleCommand.buildShuffleEmbed(result.shuffled, message.author.displayName);
 
       await message.reply({ embeds: [embed] });
       return;
