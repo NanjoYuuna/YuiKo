@@ -35,8 +35,8 @@ export function buildRollEmbed(expression: string, result: DiceResult, userName:
     .setColor(0x00A8E8)
     .setTitle('🎲 擲骰結果')
     .setDescription(
-      `> **\` ${expression} \`**\n\n` +
-      `### 👉 **${result.total}**`
+      `> **\` ${expression} \`**\n` +
+      `## 👉 **${result.total}**`
     )
     .addFields({
       name: '🎲 擲骰過程',
