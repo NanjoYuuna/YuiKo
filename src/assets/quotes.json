@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "text": "我立了一個Flag...",
+    "description": "立Flag的經典台詞，下一秒就出事了",
+    "imageUrl": "https://i.imgur.com/placeholder_flag.png",
+    "tags": ["flag", "立flag", "死亡旗", "flag", "trpg", "死"]
+  },
+  {
+    "id": 2,
+    "text": "沒事的，這種小怪不可能讓我掛的！",
+    "description": "充滿自信地說出這句話的角色通常會在下一刻領便當",
+    "imageUrl": "https://i.imgur.com/placeholder_confident.png",
+    "tags": ["flag", "自信", "死亡旗", "小怪", "掛", "便當"]
+  },
+  {
+    "id": 3,
+    "text": "跑團就是要帥，帥完再說！",
+    "description": "每個TRPG玩家的心聲",
+    "imageUrl": "https://i.imgur.com/placeholder_cool.png",
+    "tags": ["trpg", "帥", "跑團", "風格"]
+  },
+  {
+    "id": 4,
+    "text": "GM你不能這樣對我！",
+    "description": "當GM放出不合理的骰點挑戰時",
+    "imageUrl": "https://i.imgur.com/placeholder_gm.png",
+    "tags": ["gm", "骰子", "不公平", "挑戰", "trpg"]
+  },
+  {
+    "id": 5,
+    "text": "1！我骰了1！！",
+    "description": "大失敗的瞬間，全桌靜默",
+    "imageUrl": "https://i.imgur.com/placeholder_critical_fail.png",
+    "tags": ["骰子", "大失敗", "1", "critical fail", "roll", "失敗"]
+  },
+  {
+    "id": 6,
+    "text": "20！！！！！！！！",
+    "description": "大成功的瞬間，全場沸騰",
+    "imageUrl": "https://i.imgur.com/placeholder_nat20.png",
+    "tags": ["骰子", "大成功", "20", "nat20", "critical", "成功"]
+  },
+  {
+    "id": 7,
+    "text": "我要嘗試說服那個龍王...",
+    "description": "用演說技能挑戰不可能的任務",
+    "imageUrl": "https://i.imgur.com/placeholder_persuade.png",
+    "tags": ["說服", "交涉", "蠢", "勇敢", "trpg", "龍"]
+  },
+  {
+    "id": 8,
+    "text": "等等，這個地下城怎麼沒有出口...",
+    "description": "當玩家發現自己走進死胡同時",
+    "imageUrl": "https://i.imgur.com/placeholder_dungeon.png",
+    "tags": ["迷宮", "地下城", "迷路", "出口", "trpg"]
+  },
+  {
+    "id": 9,
+    "text": "我的角色絕對不會死的，我還有背景故事沒說完",
+    "description": "又一面大旗緩緩升起",
+    "imageUrl": "https://i.imgur.com/placeholder_backstory.png",
+    "tags": ["flag", "死亡旗", "背景故事", "角色", "trpg"]
+  },
+  {
+    "id": 10,
+    "text": "這個NPC看起來可疑，我要攻擊他",
+    "description": "玩家的第六感有時候準確，有時候……",
+    "imageUrl": "https://i.imgur.com/placeholder_npc.png",
+    "tags": ["npc", "攻擊", "可疑", "直覺", "trpg"]
+  },
+  {
+    "id": 11,
+    "text": "信我，這個計劃萬無一失！",
+    "description": "天衣無縫的計劃在第一個骰點時就崩了",
+    "imageUrl": "https://i.imgur.com/placeholder_plan.png",
+    "tags": ["計劃", "自信", "失敗", "flag", "trpg"]
+  },
+  {
+    "id": 12,
+    "text": "等等，我有一個想法...",
+    "description": "接下來通常是天才計劃或是大災難",
+    "imageUrl": "https://i.imgur.com/placeholder_idea.png",
+    "tags": ["計劃", "想法", "天才", "disaster", "trpg"]
+  },
+  {
+    "id": 13,
+    "text": "骰子是我的朋友... 骰子是我的朋友...",
+    "description": "對骰子懷有莫名信仰的跑團玩家",
+    "imageUrl": "https://i.imgur.com/placeholder_dice_prayer.png",
+    "tags": ["骰子", "祈禱", "信仰", "roll", "trpg"]
+  },
+  {
+    "id": 14,
+    "text": "GM說可以的，所以我要試試看",
+    "description": "利用規則漏洞的玩家名言",
+    "imageUrl": "https://i.imgur.com/placeholder_rules.png",
+    "tags": ["規則", "gm", "漏洞", "試試看", "trpg"]
+  },
+  {
+    "id": 15,
+    "text": "這只是第一章，我不會死的",
+    "description": "悲觀的玩家與第一章BOSS的死亡迷思",
+    "imageUrl": "https://i.imgur.com/placeholder_chapter1.png",
+    "tags": ["死亡", "flag", "第一章", "boss", "trpg"]
+  },
+  {
+    "id": 16,
+    "text": "我的角色是個平凡人，不會有人注意到他的",
+    "description": "命運偏偏讓平凡人成為救世主",
+    "imageUrl": "https://i.imgur.com/placeholder_ordinary.png",
+    "tags": ["平凡", "主角", "命運", "flag", "trpg"]
+  },
+  {
+    "id": 17,
+    "text": "我要偷那個國王的王冠！",
+    "description": "神偷計劃的第一步：制定完美的作案計劃",
+    "imageUrl": "https://i.imgur.com/placeholder_steal.png",
+    "tags": ["偷", "盜賊", "王冠", "計劃", "trpg"]
+  },
+  {
+    "id": 18,
+    "text": "這道門肯定有陷阱！（踢門）",
+    "description": "有時候直接最有效，有時候最慘烈",
+    "imageUrl": "https://i.imgur.com/placeholder_door.png",
+    "tags": ["陷阱", "門", "直接", "勇敢", "trpg"]
+  }
+]
