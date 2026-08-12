@@ -8,6 +8,19 @@ import {
   Message,
 } from 'discord.js';
 
+// ─── 0. Types ─────────────────────────────────────────────────────────────────
+
+export type ChoiceTemplate =
+  | 'template_a'
+  | 'template_b'
+  | 'template_c'
+  | 'template_d'
+  | 'template_e'
+  | 'template_f'
+  | 'template_g';
+
+export type RollTemplate = 'template_a' | 'template_b' | 'template_c';
+
 // ─── 1. Slash Command Definitions ─────────────────────────────────────────────
 
 export const choiceDemoData = new SlashCommandBuilder()
@@ -20,7 +33,7 @@ export const rollDemoData = new SlashCommandBuilder()
 
 // ─── 2. UI Builders (Select Menu Rows) ────────────────────────────────────────
 
-function buildChoiceDemoSelectRow(selectedTemplate: 'template_a' | 'template_b' | 'template_c'): ActionRowBuilder<StringSelectMenuBuilder> {
+function buildChoiceDemoSelectRow(selectedTemplate: ChoiceTemplate): ActionRowBuilder<StringSelectMenuBuilder> {
   const selectMenu = new StringSelectMenuBuilder()
     .setCustomId('choice_demo_select')
     .setPlaceholder('選擇隨機抽選版型...')
@@ -43,12 +56,36 @@ function buildChoiceDemoSelectRow(selectedTemplate: 'template_a' | 'template_b' 
         value: 'template_c',
         default: selectedTemplate === 'template_c',
       },
+      {
+        label: '樣板 D',
+        description: '展示樣板 D 排版',
+        value: 'template_d',
+        default: selectedTemplate === 'template_d',
+      },
+      {
+        label: '樣板 E',
+        description: '展示樣板 E 排版',
+        value: 'template_e',
+        default: selectedTemplate === 'template_e',
+      },
+      {
+        label: '樣板 F',
+        description: '展示樣板 F 排版',
+        value: 'template_f',
+        default: selectedTemplate === 'template_f',
+      },
+      {
+        label: '樣板 G',
+        description: '展示樣板 G 排版',
+        value: 'template_g',
+        default: selectedTemplate === 'template_g',
+      },
     ]);
 
   return new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(selectMenu);
 }
 
-function buildRollDemoSelectRow(selectedTemplate: 'template_a' | 'template_b' | 'template_c'): ActionRowBuilder<StringSelectMenuBuilder> {
+function buildRollDemoSelectRow(selectedTemplate: RollTemplate): ActionRowBuilder<StringSelectMenuBuilder> {
   const selectMenu = new StringSelectMenuBuilder()
     .setCustomId('roll_demo_select')
     .setPlaceholder('選擇擲骰結果版型...')
@@ -79,7 +116,7 @@ function buildRollDemoSelectRow(selectedTemplate: 'template_a' | 'template_b' | 
 // ─── 3. Embed Generators ──────────────────────────────────────────────────────
 
 export function buildChoiceDemoEmbed(
-  template: 'template_a' | 'template_b' | 'template_c',
+  template: ChoiceTemplate,
   userName: string
 ): EmbedBuilder {
   const picked = '壽司';
@@ -104,7 +141,6 @@ export function buildChoiceDemoEmbed(
         .setTitle('🔀 隨機抽選 (樣板 B)')
         .setDescription(
           `## 👉 ${picked}\n\n` +
-          `**選項**\n` +
           `\`\`\`\n${optionsText}\n\`\`\``
         )
         .setFooter({ text: `3 個選項 由 ${userName} 發起` })
@@ -115,7 +151,54 @@ export function buildChoiceDemoEmbed(
         .setColor(0xF59E0B)
         .setTitle('🔀 隨機抽選 (樣板 C)')
         .setDescription(
-          `## 👉 ${picked}\n\n` +
+          `## ➔ ${picked}\n\n` +
+          `**選項**\n` +
+          `\`\`\`\n${optionsText}\n\`\`\``
+        )
+        .setFooter({ text: `3 個選項 由 ${userName} 發起` })
+        .setTimestamp();
+
+    case 'template_d':
+      return new EmbedBuilder()
+        .setColor(0xF59E0B)
+        .setTitle('🔀 隨機抽選 (樣板 D)')
+        .setDescription(
+          `## ${picked}\n\n` +
+          `\`\`\`\n${optionsText}\n\`\`\``
+        )
+        .setFooter({ text: `3 個選項 由 ${userName} 發起` })
+        .setTimestamp();
+
+    case 'template_e':
+      return new EmbedBuilder()
+        .setColor(0xF59E0B)
+        .setTitle('🔀 隨機抽選 (樣板 E)')
+        .setDescription(
+          `## 🤌 ${picked}\n\n` +
+          `**選項**\n` +
+          `\`\`\`\n${optionsText}\n\`\`\``
+        )
+        .setFooter({ text: `3 個選項 由 ${userName} 發起` })
+        .setTimestamp();
+
+    case 'template_f':
+      return new EmbedBuilder()
+        .setColor(0xF59E0B)
+        .setTitle('🔀 隨機抽選 (樣板 F)')
+        .setDescription(
+          `## 🫴🏽 ${picked}\n\n` +
+          `**選項**\n` +
+          `\`\`\`\n${optionsText}\n\`\`\``
+        )
+        .setFooter({ text: `3 個選項 由 ${userName} 發起` })
+        .setTimestamp();
+
+    case 'template_g':
+      return new EmbedBuilder()
+        .setColor(0xF59E0B)
+        .setTitle('🔀 隨機抽選 (樣板 G)')
+        .setDescription(
+          `## > ${picked}\n\n` +
           `**選項**\n` +
           `\`\`\`\n${optionsText}\n\`\`\``
         )
@@ -125,7 +208,7 @@ export function buildChoiceDemoEmbed(
 }
 
 export function buildRollDemoEmbed(
-  template: 'template_a' | 'template_b' | 'template_c',
+  template: RollTemplate,
   userName: string
 ): EmbedBuilder {
   const expression = '1d100';
@@ -154,14 +237,10 @@ export function buildRollDemoEmbed(
         .setColor(0x00A8E8)
         .setTitle('🎲 擲骰結果 (樣板 B)')
         .setDescription(
-          `> **\` ${expression} \`**\n` +
-          `## 👉 **${total}**`
+          `> 指令：\`${expression}\`\n` +
+          `> 過程：${breakdown}\n\n` +
+          `## ➔ **${total}**`
         )
-        .addFields({
-          name: '🎲 擲骰過程',
-          value: breakdown,
-          inline: false,
-        })
         .setFooter({ text: `由 ${userName} 擲出` })
         .setTimestamp();
 
@@ -171,13 +250,9 @@ export function buildRollDemoEmbed(
         .setTitle('🎲 擲骰結果 (樣板 C)')
         .setDescription(
           `> **\` ${expression} \`**\n` +
-          `## 👉 **${total}**`
+          `## ➔ **${total}**` +
+          `> ${breakdown}\n\n`
         )
-        .addFields({
-          name: '🎲 擲骰過程',
-          value: breakdown,
-          inline: false,
-        })
         .setFooter({ text: `由 ${userName} 擲出` })
         .setTimestamp();
   }
@@ -212,14 +287,15 @@ export async function executeRollDemoText(message: Message): Promise<void> {
 // ─── 5. Select Menu Event Handler ─────────────────────────────────────────────
 
 export async function handleTempDemoSelect(interaction: StringSelectMenuInteraction): Promise<void> {
-  const selected = interaction.values[0] as 'template_a' | 'template_b' | 'template_c';
   const displayName = interaction.user.displayName;
 
   if (interaction.customId === 'choice_demo_select') {
+    const selected = interaction.values[0] as ChoiceTemplate;
     const embed = buildChoiceDemoEmbed(selected, displayName);
     const row = buildChoiceDemoSelectRow(selected);
     await interaction.update({ embeds: [embed], components: [row] });
   } else if (interaction.customId === 'roll_demo_select') {
+    const selected = interaction.values[0] as RollTemplate;
     const embed = buildRollDemoEmbed(selected, displayName);
     const row = buildRollDemoSelectRow(selected);
     await interaction.update({ embeds: [embed], components: [row] });
