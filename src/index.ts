@@ -12,6 +12,7 @@ import * as rollCommand from './interactions/commands/roll.js';
 import * as choiceCommand from './interactions/commands/choice.js';
 import * as shuffleCommand from './interactions/commands/shuffle.js';
 import * as tarotModule from './interactions/commands/tarot.js';
+import * as tempDemoModule from './commands/tempDemo.js';
 // import * as quoteCommand from './interactions/commands/quote.js'; // 註解台詞迷因
 // import * as spinCommand from './interactions/commands/spin.js'; // 註解輪盤
 
@@ -44,6 +45,15 @@ commands.set(tarotModule.dailyTarotData.name, {
 commands.set(tarotModule.tarot3Data.name, {
   data: tarotModule.tarot3Data,
   execute: (interaction) => handleTarotDraw(interaction, 'three'),
+});
+
+commands.set(tempDemoModule.choiceDemoData.name, {
+  data: tempDemoModule.choiceDemoData,
+  execute: tempDemoModule.executeChoiceDemo,
+});
+commands.set(tempDemoModule.rollDemoData.name, {
+  data: tempDemoModule.rollDemoData,
+  execute: tempDemoModule.executeRollDemo,
 });
 
 // commands.set(quoteCommand.data.name, quoteCommand); // 註解台詞迷因
@@ -127,6 +137,21 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
     }
     return;
   }
+
+  // 3. Select Menu Interactions (Temp Demo Select Menus)
+  if (interaction.isStringSelectMenu()) {
+    try {
+      if (
+        interaction.customId === 'choice_demo_select' ||
+        interaction.customId === 'roll_demo_select'
+      ) {
+        await tempDemoModule.handleTempDemoSelect(interaction);
+      }
+    } catch (error) {
+      console.error(`❌ 下拉選單互動時發生錯誤 (${interaction.customId})：`, error);
+    }
+    return;
+  }
 });
 
 // ─── Event: Plain Text Commands ────────────────────────────────────────────────
@@ -207,6 +232,17 @@ client.on(Events.MessageCreate, async (message: Message) => {
 
   if (content === '時間塔羅' || content === '/tarot_3') {
     await handleTarotDrawText(message, 'three');
+    return;
+  }
+
+  // 5. Temp Demo Commands (隨機樣板, /choice_demo, 擲骰樣板, /roll_demo)
+  if (content === '隨機樣板' || content === '/choice_demo') {
+    await tempDemoModule.executeChoiceDemoText(message);
+    return;
+  }
+
+  if (content === '擲骰樣板' || content === '/roll_demo') {
+    await tempDemoModule.executeRollDemoText(message);
     return;
   }
 });

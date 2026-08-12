@@ -706,7 +706,7 @@
   {
     "id": 64,
     "name": "Ace of Pentacles",
-    "nameZh": "五角星王牌",
+    "nameZh": "錢幣王牌",
     "arcana": "pentacles",
     "number": "Ace",
     "uprightMeaning": "物質機會、財富、豐盛、新的財務開始。一個充滿物質潛力的新機會即將到來，把握這份繁榮的種子。",
@@ -717,7 +717,7 @@
   {
     "id": 65,
     "name": "Two of Pentacles",
-    "nameZh": "五角星二",
+    "nameZh": "錢幣二",
     "arcana": "pentacles",
     "number": "2",
     "uprightMeaning": "平衡、適應力、時間管理、優先順序。你正在雜耍多個責任，保持靈活與幽默，找到屬於你的平衡。",
@@ -728,7 +728,7 @@
   {
     "id": 66,
     "name": "Three of Pentacles",
-    "nameZh": "五角星三",
+    "nameZh": "錢幣三",
     "arcana": "pentacles",
     "number": "3",
     "uprightMeaning": "合作、學習、技能、團隊合作。與他人合作能創造出比個人更偉大的成果，珍視每個人帶來的貢獻。",
@@ -739,7 +739,7 @@
   {
     "id": 67,
     "name": "Four of Pentacles",
-    "nameZh": "五角星四",
+    "nameZh": "錢幣四",
     "arcana": "pentacles",
     "number": "4",
     "uprightMeaning": "保守、穩定、安全感、持有。審慎地管理你的資源，但也要注意，過度的保守可能阻礙你的成長。",
@@ -750,7 +750,7 @@
   {
     "id": 68,
     "name": "Five of Pentacles",
-    "nameZh": "五角星五",
+    "nameZh": "錢幣五",
     "arcana": "pentacles",
     "number": "5",
     "uprightMeaning": "財務困難、貧困、絕望、被排除在外。艱難的時期考驗你的韌性，記得尋求幫助，你並不孤單。",
@@ -761,7 +761,7 @@
   {
     "id": 69,
     "name": "Six of Pentacles",
-    "nameZh": "五角星六",
+    "nameZh": "錢幣六",
     "arcana": "pentacles",
     "number": "6",
     "uprightMeaning": "給予、接受、慷慨、社區。財富在流通中增值，慷慨地分享你的豐盛，也優雅地接受他人的好意。",
@@ -772,7 +772,7 @@
   {
     "id": 70,
     "name": "Seven of Pentacles",
-    "nameZh": "五角星七",
+    "nameZh": "錢幣七",
     "arcana": "pentacles",
     "number": "7",
     "uprightMeaning": "耐心、長期投資、評估、收穫。你的努力需要時間才能看到結果，保持耐心，豐收的時刻終將到來。",
@@ -783,7 +783,7 @@
   {
     "id": 71,
     "name": "Eight of Pentacles",
-    "nameZh": "五角星八",
+    "nameZh": "錢幣八",
     "arcana": "pentacles",
     "number": "8",
     "uprightMeaning": "勤奮、技能發展、專注、匠人精神。專注且持續地精進你的技藝，每一次的練習都讓你更接近精通。",
@@ -794,7 +794,7 @@
   {
     "id": 72,
     "name": "Nine of Pentacles",
-    "nameZh": "五角星九",
+    "nameZh": "錢幣九",
     "arcana": "pentacles",
     "number": "9",
     "uprightMeaning": "富足、獨立、自我滿足、豪華。你通過自己的努力創造了豐盛的生活，享受這份優雅的獨立與成就。",
@@ -805,7 +805,7 @@
   {
     "id": 73,
     "name": "Ten of Pentacles",
-    "nameZh": "五角星十",
+    "nameZh": "錢幣十",
     "arcana": "pentacles",
     "number": "10",
     "uprightMeaning": "長久財富、家族遺產、傳承、圓滿。物質上的最大圓滿，建立能夠傳承後代的穩固基礎與家族財富。",
@@ -816,7 +816,7 @@
   {
     "id": 74,
     "name": "Page of Pentacles",
-    "nameZh": "五角星侍者",
+    "nameZh": "錢幣侍者",
     "arcana": "pentacles",
     "number": "Page",
     "uprightMeaning": "抱負、新的物質機會、學習、計畫。帶著認真與好奇心學習新技能，務實的態度將幫助你抓住機會。",
@@ -827,7 +827,7 @@
   {
     "id": 75,
     "name": "Knight of Pentacles",
-    "nameZh": "五角星騎士",
+    "nameZh": "錢幣騎士",
     "arcana": "pentacles",
     "number": "Knight",
     "uprightMeaning": "努力工作、可靠、謹慎、堅持。以穩定且踏實的步伐前進，你的可靠性是最寶貴的資產。",
@@ -838,7 +838,7 @@
   {
     "id": 76,
     "name": "Queen of Pentacles",
-    "nameZh": "五角星王后",
+    "nameZh": "錢幣王后",
     "arcana": "pentacles",
     "number": "Queen",
     "uprightMeaning": "滋養、務實、舒適、財務安全。以務實和溫暖的態度照顧自己和他人，創造一個安全、豐盛的環境。",
@@ -849,7 +849,7 @@
   {
     "id": 77,
     "name": "King of Pentacles",
-    "nameZh": "五角星國王",
+    "nameZh": "錢幣國王",
     "arcana": "pentacles",
     "number": "King",
     "uprightMeaning": "財富、商業、領導力、安全感。你是物質領域的大師，以智慧和穩健創造持久的財富與影響力。",
