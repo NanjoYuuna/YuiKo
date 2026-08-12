@@ -13,6 +13,7 @@ import * as choiceCommand from './interactions/commands/choice.js';
 import * as shuffleCommand from './interactions/commands/shuffle.js';
 import * as tarotModule from './interactions/commands/tarot.js';
 import * as tempDemoModule from './commands/tempDemo.js';
+import * as groupModule from './interactions/commands/group.js';
 // import * as quoteCommand from './interactions/commands/quote.js'; // 註解台詞迷因
 // import * as spinCommand from './interactions/commands/spin.js'; // 註解輪盤
 
@@ -28,6 +29,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildVoiceStates,
   ],
 });
 
@@ -54,6 +56,15 @@ commands.set(tempDemoModule.choiceDemoData.name, {
 commands.set(tempDemoModule.rollDemoData.name, {
   data: tempDemoModule.rollDemoData,
   execute: tempDemoModule.executeRollDemo,
+});
+
+commands.set(groupModule.groupVoiceData.name, {
+  data: groupModule.groupVoiceData,
+  execute: groupModule.executeGroupVoice,
+});
+commands.set(groupModule.groupListData.name, {
+  data: groupModule.groupListData,
+  execute: groupModule.executeGroupList,
 });
 
 // commands.set(quoteCommand.data.name, quoteCommand); // 註解台詞迷因
@@ -118,13 +129,15 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
     return;
   }
 
-  // 2. Button Interactions (Tarot Buttons)
+  // 2. Button Interactions (Tarot Buttons & Group Reroll)
   if (interaction.isButton()) {
     try {
       if (interaction.customId === 'tarot_single') {
         await handleTarotDraw(interaction, 'single');
       } else if (interaction.customId === 'tarot_three') {
         await handleTarotDraw(interaction, 'three');
+      } else if (interaction.customId === 'reroll_group') {
+        await groupModule.handleGroupRerollButton(interaction);
       }
     } catch (error) {
       console.error(`❌ 按鈕互動時發生錯誤 (${interaction.customId})：`, error);
@@ -243,6 +256,22 @@ client.on(Events.MessageCreate, async (message: Message) => {
 
   if (content === '擲骰樣板' || content === '/roll_demo') {
     await tempDemoModule.executeRollDemoText(message);
+    return;
+  }
+
+  // 6. Text Grouping Commands (分組 名單 隊伍數 / 語音分組 隊伍數)
+  const groupListMatch = content.match(/^(?:\/group_list|\/分組|分組)\s+(.+)\s+(\d+)$/i);
+  if (groupListMatch) {
+    const rawMembers = groupListMatch[1]!;
+    const teamCount = parseInt(groupListMatch[2]!, 10);
+    await groupModule.executeGroupListText(message, rawMembers, teamCount);
+    return;
+  }
+
+  const groupVoiceMatch = content.match(/^(?:\/group_voice|\/語音分組|語音分組)\s+(\d+)$/i);
+  if (groupVoiceMatch) {
+    const teamCount = parseInt(groupVoiceMatch[1]!, 10);
+    await groupModule.executeGroupVoiceText(message, teamCount);
     return;
   }
 });
