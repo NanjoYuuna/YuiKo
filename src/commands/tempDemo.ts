@@ -198,7 +198,7 @@ export function buildChoiceDemoEmbed(
         .setColor(0xF59E0B)
         .setTitle('🔀 隨機抽選 (樣板 G)')
         .setDescription(
-          `## > ${picked}\n\n` +
+          `## ${picked}\n\n` +
           `**選項**\n` +
           `\`\`\`\n${optionsText}\n\`\`\``
         )
@@ -211,9 +211,9 @@ export function buildRollDemoEmbed(
   template: RollTemplate,
   userName: string
 ): EmbedBuilder {
-  const expression = '1d100';
-  const total = 87;
-  const breakdown = '**87**';
+  const expression = '3d20+2';
+  const total = 38;
+  const breakdown = '[**12**, **18**, **6**] + 2';
 
   switch (template) {
     case 'template_a':
@@ -238,7 +238,7 @@ export function buildRollDemoEmbed(
         .setTitle('🎲 擲骰結果 (樣板 B)')
         .setDescription(
           `> 指令：\`${expression}\`\n` +
-          `> 過程：${breakdown}\n\n` +
+          `> 過程：${breakdown}\n` +
           `## ➔ **${total}**`
         )
         .setFooter({ text: `由 ${userName} 擲出` })
@@ -250,8 +250,8 @@ export function buildRollDemoEmbed(
         .setTitle('🎲 擲骰結果 (樣板 C)')
         .setDescription(
           `> **\` ${expression} \`**\n` +
-          `## ➔ **${total}**` +
-          `> ${breakdown}\n\n`
+          `## ➔ **${total}**\n` +
+          `${breakdown}`
         )
         .setFooter({ text: `由 ${userName} 擲出` })
         .setTimestamp();
