@@ -308,29 +308,9 @@ app.listen(PORT, () => {
 
 // ─── Login ────────────────────────────────────────────────────────────────────
 
-(async () => {
-  // ─ Pre-flight: 測試是否能連到 Discord API ───────────────────────
-  try {
-    console.log('🌐 Pre-flight: 測試 Discord API 連線...');
-    const res = await fetch('https://discord.com/api/v10/gateway');
-    console.log(`✅ Discord API 可連線，status: ${res.status}`);
-  } catch (err) {
-    console.error('🚨 無法連接到 Discord API！可能是 Render 網路問題：', err);
-  }
-
-  // ─ Login with 30s timeout ──────────────────────────────────
-  console.log('🔑 正在嘗試登入 Discord...');
-
-  const loginTimeout = new Promise<never>((_resolve, reject) =>
-    setTimeout(() => reject(new Error('⏰ client.login() 超過 30 秒未完成，可能是 Gateway WebSocket 無法連接')), 30_000)
-  );
-
-  try {
-    await Promise.race([client.login(TOKEN), loginTimeout]);
-    console.log('✅ client.login() 成功，等待 READY 事件...');
-  } catch (error: unknown) {
-    console.error('❌ Discord 登入失敗：', error);
-    process.exit(1);
-  }
-})();
+console.log('🔑 正在嘗試登入 Discord（discord.js 將自動處理 rate limit 重試）...');
+client.login(TOKEN).catch((error: unknown) => {
+  // 不呼叫 process.exit，避免 Render 重啟循環讓 rate limit 更嚴重
+  console.error('❌ Discord 登入失敗（將等待 discord.js 自動重試）：', error);
+});
 
