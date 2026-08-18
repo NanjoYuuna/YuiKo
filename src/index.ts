@@ -1,3 +1,12 @@
+// ─── Global Error Handlers ───────────────────────────────────────────────────
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('🚨 [unhandledRejection]', reason, promise);
+});
+process.on('uncaughtException', (error) => {
+  console.error('🚨 [uncaughtException]', error);
+  process.exit(1);
+});
+
 import { Client, GatewayIntentBits, Collection, Events, Interaction, Message, EmbedBuilder } from 'discord.js';
 import express from 'express';
 import { TOKEN, PORT } from './config.js';
@@ -299,7 +308,10 @@ app.listen(PORT, () => {
 
 // ─── Login ────────────────────────────────────────────────────────────────────
 
-client.login(TOKEN).catch((error: unknown) => {
-  console.error('❌ Discord 登入失敗：', error);
-  process.exit(1);
-});
+console.log('🔑 正在嘗試登入 Discord...');
+client.login(TOKEN)
+  .then(() => console.log('✅ client.login() 成功，等待 READY 事件...'))
+  .catch((error: unknown) => {
+    console.error('❌ Discord 登入失敗：', error);
+    process.exit(1);
+  });
