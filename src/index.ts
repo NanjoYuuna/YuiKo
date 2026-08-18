@@ -1,10 +1,11 @@
 // ─── Global Error Handlers ───────────────────────────────────────────────────
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('🚨 [unhandledRejection]', reason, promise);
+process.on('unhandledRejection', (reason) => {
+  console.error('🚨 [unhandledRejection]', reason);
+  // 不呼叫 process.exit — 避免 Render 重啟循環觸發 Discord rate limit
 });
 process.on('uncaughtException', (error) => {
   console.error('🚨 [uncaughtException]', error);
-  process.exit(1);
+  // 不呼叫 process.exit — 避免 Render 重啟循環觸發 Discord rate limit
 });
 
 import { Client, GatewayIntentBits, Collection, Events, Interaction, Message, EmbedBuilder } from 'discord.js';
@@ -306,11 +307,27 @@ app.listen(PORT, () => {
   console.log(`🌐 Health-check 伺服器啟動於 port ${PORT}`);
 });
 
-// ─── Login ────────────────────────────────────────────────────────────────────
+// ─── Login with Exponential Backoff ──────────────────────────────────────────────
 
-console.log('🔑 正在嘗試登入 Discord（discord.js 將自動處理 rate limit 重試）...');
-client.login(TOKEN).catch((error: unknown) => {
-  // 不呼叫 process.exit，避免 Render 重啟循環讓 rate limit 更嚴重
-  console.error('❌ Discord 登入失敗（將等待 discord.js 自動重試）：', error);
+// 監聽 discord.js 內部錯誤（不退出程式）
+client.on(Events.Error, (error) => {
+  console.error('❌ [Discord Client Error]', error);
 });
 
+/**
+ * 登入 Discord，失敗時以指數退避重試（防止觸發 rate limit）
+ * 延遲順序：1s → 2s → 4s → 8s → ... 最大 5 分鐘
+ */
+async function loginWithBackoff(attempt = 1): Promise<void> {
+  try {
+    await client.login(TOKEN);
+  } catch (error) {
+    const MAX_DELAY_MS = 5 * 60 * 1000; // 5 分鐘
+    const delay = Math.min(1000 * Math.pow(2, attempt - 1), MAX_DELAY_MS);
+    console.error(`❌ Discord 登入失敗（第 ${attempt} 次），${delay / 1000} 秒後重試：`, error);
+    await new Promise(resolve => setTimeout(resolve, delay));
+    await loginWithBackoff(attempt + 1);
+  }
+}
+
+loginWithBackoff();
