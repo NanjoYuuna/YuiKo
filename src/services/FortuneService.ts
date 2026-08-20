@@ -147,7 +147,6 @@ export function getCardLocalPath(card: TarotCard): string {
     path.join(process.cwd(), 'src', 'assets', 'tarot', card.filename),
     path.join(process.cwd(), 'dist', 'assets', 'tarot', card.filename),
     path.join(process.cwd(), 'assets', 'tarot', card.filename),
-    path.join(__dirname, '../assets/tarot', card.filename),
   ];
 
   for (const p of possiblePaths) {

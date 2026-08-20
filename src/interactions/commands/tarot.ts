@@ -119,13 +119,13 @@ export async function handleTarotDraw(
   interaction: ChatInputCommandInteraction | ButtonInteraction,
   type: 'single' | 'three'
 ): Promise<void> {
-  if (!interaction.deferred && !interaction.replied) {
-    await interaction.deferReply();
-  }
-
   try {
     const payload = await buildTarotPayload(type, interaction.user.displayName, interaction.user.id);
-    await interaction.editReply(payload);
+    if (interaction.deferred || interaction.replied) {
+      await interaction.editReply(payload);
+    } else {
+      await interaction.reply(payload);
+    }
   } catch (error) {
     console.error('❌ [TarotDraw] 處理塔羅牌抽牌時發生錯誤：', error);
     const errorMsg = '⚠️ 處理塔羅牌抽牌時發生錯誤，請稍後再試。';
