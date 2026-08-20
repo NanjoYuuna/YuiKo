@@ -38,7 +38,7 @@ export function buildChoiceEmbed(picked: string, options: string[], userName: st
     .setColor(0xF59E0B)
     .setTitle('🔀 隨機抽選')
     .setDescription(
-      `## 👉 ${picked}\n\n` +
+      `## ➔ ${picked}\n\n` +
       `**選項**\n` +
       `\`\`\`\n${optionsText}\n\`\`\``
     )

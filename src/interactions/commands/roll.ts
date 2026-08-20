@@ -30,19 +30,17 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
   }
 }
 
-export function buildRollEmbed(expression: string, result: DiceResult, userName: string): EmbedBuilder {
+export function buildRollEmbed(expression: string, result: DiceResult, userName: string, reason?: string): EmbedBuilder {
+  const title = reason ? `🎲 擲骰 ： ${reason}` : '🎲 擲骰';
+
   return new EmbedBuilder()
     .setColor(0x00A8E8)
-    .setTitle('🎲 擲骰結果')
+    .setTitle(title)
     .setDescription(
       `> **\` ${expression} \`**\n` +
-      `## 👉 **${result.total}**`
+      `## ➔ **${result.total}**\n` +
+      `${result.breakdown}`
     )
-    .addFields({
-      name: '🎲 擲骰過程',
-      value: result.breakdown,
-      inline: false,
-    })
     .setFooter({ text: `由 ${userName} 擲出` })
     .setTimestamp();
 }
