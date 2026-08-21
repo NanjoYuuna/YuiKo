@@ -28,11 +28,7 @@ export async function execute(interaction: ChatInputCommandInteraction): Promise
     return;
   }
 
-  const embed = new EmbedBuilder()
-    .setColor(0x2B2D31)
-    .setImage(quote.imageUrl);
-
-  await interaction.reply({ embeds: [embed] });
+  await interaction.reply({ content: quote.imageUrl });
 }
 
 export function buildEmbed(

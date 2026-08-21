@@ -304,12 +304,8 @@ client.on(Events.MessageCreate, async (message: Message) => {
       return;
     }
 
-    // 使用無文字標題的純圖片 Embed，強制 Discord 載入圖片避免純網址預覽失敗
-    const embed = new EmbedBuilder()
-      .setColor(0x2B2D31)
-      .setImage(quote.imageUrl);
-
-    await message.reply({ embeds: [embed] });
+    // 直接發送圖片網址，Discord 會自動載入預覽圖片且不會留下空白 Embed 框
+    await message.reply({ content: quote.imageUrl });
     return;
   }
 });
