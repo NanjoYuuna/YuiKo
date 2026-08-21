@@ -18,12 +18,20 @@ let lastFetchTime = 0;
 const CACHE_TTL = 1000 * 60 * 60; // 1 小時快取
 
 function mapItemToQuote(item: any): Quote {
-  const episodeNum = item.episode ? String(item.episode).replace(/^mygo_/, '') : '';
-  const episodeText = episodeNum ? `第 ${episodeNum} 集` : '';
   const filename = item.filename || '';
-  const imageUrl = episodeNum && filename
-    ? `https://drive.miyago9267.com/d/file/img/searcher/mygo/${episodeNum}/${encodeURIComponent(filename)}`
-    : (item.imageUrl || '');
+  let imageUrl = item.imageUrl || '';
+  let episodeText = '';
+
+  if (item.episode && filename) {
+    const parts = String(item.episode).split('_');
+    const series = parts[0];
+    const epNum = parts[1];
+
+    if (series && epNum) {
+      imageUrl = `https://drive.miyago9267.com/d/file/img/searcher/${series}/${epNum}/${encodeURIComponent(filename)}`;
+      episodeText = `${series === 'mujica' ? 'Ave Mujica ' : ''}第 ${epNum} 集`;
+    }
+  }
 
   return {
     id: typeof item.id === 'number' ? item.id : 0,
@@ -48,7 +56,8 @@ export async function loadQuotes(): Promise<Quote[]> {
       if (response.ok) {
         const rawData = await response.json();
         if (Array.isArray(rawData) && rawData.length > 0) {
-          cachedQuotes = rawData.map(mapItemToQuote);
+          const validData = rawData.filter(item => item && item.filename);
+          cachedQuotes = validData.map(mapItemToQuote);
           lastFetchTime = now;
           return cachedQuotes;
         }
