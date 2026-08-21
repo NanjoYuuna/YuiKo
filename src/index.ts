@@ -304,8 +304,12 @@ client.on(Events.MessageCreate, async (message: Message) => {
       return;
     }
 
-    // 只直接回應圖片網址
-    await message.reply({ content: quote.imageUrl });
+    // 使用無文字標題的純圖片 Embed，強制 Discord 載入圖片避免純網址預覽失敗
+    const embed = new EmbedBuilder()
+      .setColor(0x2B2D31)
+      .setImage(quote.imageUrl);
+
+    await message.reply({ embeds: [embed] });
     return;
   }
 });
