@@ -3,54 +3,49 @@ import {
   EmbedBuilder,
   SlashCommandBuilder,
 } from 'discord.js';
-import { getByKeyword, getRandom } from '../../services/MemeService.js';
+import { getByKeyword, getRandom, Quote } from '../../services/MemeService.js';
 
 export const data = new SlashCommandBuilder()
   .setName('quote')
-  .setDescription('💬 搜尋並發送經典跑團台詞　用法：/quote flag　或　/quote（隨機）')
+  .setDescription('💬 搜尋 MyGO 梗圖 / 台詞　用法：/quote 春日影 或 . 關鍵字')
   .addStringOption(opt =>
     opt
       .setName('q')
-      .setDescription('搜尋關鍵字，例如：flag、骰子、gm（不輸入則隨機）')
+      .setDescription('搜尋關鍵字，例如：春日影、爽世、一輩子（不輸入則隨機）')
       .setRequired(false)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction): Promise<void> {
   const keyword = interaction.options.getString('q');
 
-  let quote = keyword ? getByKeyword(keyword) : getRandom();
+  const quote = keyword ? await getByKeyword(keyword) : await getRandom();
 
-  if (!quote) {
-    quote = getRandom();
+  if (!quote || !quote.imageUrl) {
     await interaction.reply({
-      content: `🔍 找不到「**${keyword}**」的相關台詞，改為隨機抽取！`,
-      embeds: [buildEmbed(quote, interaction.user.displayName)],
+      content: `🔍 找不到「**${keyword || ''}**」的相關梗圖。`,
+      ephemeral: true,
     });
     return;
   }
 
-  const header = keyword
-    ? `🔍 關鍵字「**${keyword}**」的搜尋結果`
-    : '🎲 隨機台詞！';
-
-  await interaction.reply({
-    content: header,
-    embeds: [buildEmbed(quote, interaction.user.displayName)],
-  });
+  await interaction.reply({ content: quote.imageUrl });
 }
 
-function buildEmbed(
-  quote: { text: string; description: string; imageUrl: string; tags: string[] },
+export function buildEmbed(
+  quote: Quote,
   username: string
 ) {
   const embed = new EmbedBuilder()
     .setColor(0x10B981)
     .setTitle(`💬 "${quote.text}"`)
-    .setDescription(quote.description)
     .setFooter({
-      text: `標籤：${quote.tags.join('、')}　由 ${username} 查詢`,
+      text: quote.tags.length > 0 ? `標籤：${quote.tags.join('、')}　由 ${username} 查詢` : `由 ${username} 查詢`,
     })
     .setTimestamp();
+
+  if (quote.description) {
+    embed.setDescription(quote.description);
+  }
 
   if (quote.imageUrl && !quote.imageUrl.includes('placeholder')) {
     embed.setImage(quote.imageUrl);

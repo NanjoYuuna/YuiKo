@@ -6,6 +6,7 @@ import { data as shuffleData } from './commands/shuffle.js';
 import { dailyTarotData, tarot3Data } from './commands/tarot.js';
 import { choiceDemoData, rollDemoData } from '../commands/tempDemo.js';
 import { groupVoiceData, groupListData } from './commands/group.js';
+import { data as quoteData } from './commands/quote.js';
 
 const commands = [
   rollData.toJSON(),
@@ -17,6 +18,7 @@ const commands = [
   rollDemoData.toJSON(),
   groupVoiceData.toJSON(),
   groupListData.toJSON(),
+  quoteData.toJSON(),
 ];
 
 const rest = new REST().setToken(TOKEN);

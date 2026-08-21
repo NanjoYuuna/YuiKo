@@ -8,6 +8,29 @@ export interface DiceResult {
   successCount?: number;
 }
 
+export interface ParsedDiceInput {
+  expression: string;
+  reason?: string;
+}
+
+/**
+ * Separates raw user input into dice expression and optional reason/title.
+ * Example: "1d20 先攻" -> { expression: "1d20", reason: "先攻" }
+ */
+export function parseDiceInput(input: string): ParsedDiceInput {
+  const trimmed = input.trim();
+  const match = trimmed.match(/^(\d*d\d+(?:kh\d+|kl\d+|>\d+)?(?:\s*[+-]\s*\d+)?)(?:\s+(.+))?$/i);
+  if (!match) {
+    return { expression: trimmed };
+  }
+
+  return {
+    expression: match[1]!.trim(),
+    reason: match[2]?.trim() || undefined,
+  };
+}
+
+
 interface ParsedExpression {
   count: number;
   faces: number;

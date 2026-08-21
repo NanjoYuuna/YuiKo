@@ -4,7 +4,7 @@ import {
   SlashCommandBuilder,
   MessageFlags,
 } from 'discord.js';
-import { roll, DiceResult } from '../../services/DiceService.js';
+import { roll, parseDiceInput, DiceResult } from '../../services/DiceService.js';
 
 export const data = new SlashCommandBuilder()
   .setName('roll')
@@ -12,16 +12,26 @@ export const data = new SlashCommandBuilder()
   .addStringOption(option =>
     option
       .setName('expression')
-      .setDescription('骰子算式，例如：1d100, 2d6+3, 4d6kh3')
+      .setDescription('骰子算式或帶有標題的算式，例如：1d100, 1d20 先攻, 2d6+3 攻擊')
       .setRequired(true)
+  )
+  .addStringOption(option =>
+    option
+      .setName('reason')
+      .setDescription('擲骰原因 / 標題 (可選，例如：先攻、敏捷檢定)')
+      .setRequired(false)
   );
 
 export async function execute(interaction: ChatInputCommandInteraction): Promise<void> {
-  const expression = interaction.options.getString('expression', true);
+  const rawExpression = interaction.options.getString('expression', true);
+  const explicitReason = interaction.options.getString('reason') ?? undefined;
 
   try {
+    const { expression, reason: parsedReason } = parseDiceInput(rawExpression);
+    const reason = explicitReason ?? parsedReason;
+
     const result = roll(expression);
-    const embed = buildRollEmbed(expression, result, interaction.user.displayName);
+    const embed = buildRollEmbed(expression, result, interaction.user.displayName, reason);
 
     await interaction.reply({ embeds: [embed] });
   } catch (error) {

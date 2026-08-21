@@ -11,9 +11,9 @@ process.on('uncaughtException', (error) => {
 import { Client, GatewayIntentBits, Collection, Events, Interaction, Message, EmbedBuilder } from 'discord.js';
 import express from 'express';
 import { TOKEN, PORT } from './config.js';
-import { roll } from './services/DiceService.js';
+import { roll, parseDiceInput } from './services/DiceService.js';
 import { parseOptions, pick, shuffle } from './services/ChoiceService.js';
-// import { spin } from './services/RouletteService.js'; // 註解輪盤
+import { getByKeyword, getRandom } from './services/MemeService.js';
 import { handleTarotDraw, handleTarotDrawText } from './interactions/commands/tarot.js';
 
 // ─── Command Loader ────────────────────────────────────────────────────────────
@@ -24,7 +24,7 @@ import * as shuffleCommand from './interactions/commands/shuffle.js';
 import * as tarotModule from './interactions/commands/tarot.js';
 import * as tempDemoModule from './commands/tempDemo.js';
 import * as groupModule from './interactions/commands/group.js';
-// import * as quoteCommand from './interactions/commands/quote.js'; // 註解台詞迷因
+import * as quoteCommand from './interactions/commands/quote.js';
 // import * as spinCommand from './interactions/commands/spin.js'; // 註解輪盤
 
 interface Command {
@@ -77,7 +77,7 @@ commands.set(groupModule.groupListData.name, {
   execute: groupModule.executeGroupList,
 });
 
-// commands.set(quoteCommand.data.name, quoteCommand); // 註解台詞迷因
+commands.set(quoteCommand.data.name, quoteCommand);
 // commands.set(spinCommand.data.name, spinCommand); // 註解輪盤
 
 // ─── Event: Ready ─────────────────────────────────────────────────────────────
@@ -184,22 +184,23 @@ client.on(Events.MessageCreate, async (message: Message) => {
 
   const content = message.content.trim();
 
-  // 1. Text Dice Rolling (只支援: 1d20/1D20, /r 1d20, /roll 1D20)
-  let diceExpression: string | null = null;
+  // 1. Text Dice Rolling (只支援: 1d20/1D20, 1d20 先攻, /r 1d20, /roll 1D20 先攻)
+  let rawDiceInput: string | null = null;
 
   const rShortcutMatch = content.match(/^(?:\/roll|\/r)\s+(.+)$/i);
-  const directDiceMatch = content.match(/^([0-9]+[dD][0-9]+(?:kh[0-9]+|kl[0-9]+|>[0-9]+)?(?:[+-][0-9]+)?)$/i);
+  const directDiceMatch = content.match(/^(\d*d\d+(?:kh\d+|kl\d+|>\d+)?(?:\s*[+-]\s*\d+)?)(?:\s+.*)?$/i);
 
   if (rShortcutMatch) {
-    diceExpression = rShortcutMatch[1]!;
+    rawDiceInput = rShortcutMatch[1]!;
   } else if (directDiceMatch) {
-    diceExpression = directDiceMatch[1]!;
+    rawDiceInput = content;
   }
 
-  if (diceExpression) {
+  if (rawDiceInput) {
     try {
-      const result = roll(diceExpression);
-      const embed = rollCommand.buildRollEmbed(diceExpression, result, message.author.displayName);
+      const { expression, reason } = parseDiceInput(rawDiceInput);
+      const result = roll(expression);
+      const embed = rollCommand.buildRollEmbed(expression, result, message.author.displayName, reason);
       await message.reply({ embeds: [embed] });
       return;
     } catch (error) {
@@ -282,6 +283,29 @@ client.on(Events.MessageCreate, async (message: Message) => {
   if (groupVoiceMatch) {
     const teamCount = parseInt(groupVoiceMatch[1]!, 10);
     await groupModule.executeGroupVoiceText(message, teamCount);
+    return;
+  }
+
+  // 7. Text Meme/Quote Commands (支援: . 關鍵字, .關鍵字, /quote 關鍵字)
+  const dotMemeMatch = content.match(/^(?:\/quote|\.)\s*(.*)$/i);
+  if (dotMemeMatch) {
+    const isSlashQuote = content.toLowerCase().startsWith('/quote');
+    const rawKw = dotMemeMatch[1]!.trim();
+
+    // 如果是單獨的多個點 (例如 ... 或 ..)，且不是 /quote，則忽略避免干擾一般聊天
+    if (!isSlashQuote && /^[\.\s]+$/.test(rawKw) && rawKw !== '') {
+      return;
+    }
+
+    const quote = rawKw && rawKw !== '隨機' ? await getByKeyword(rawKw) : await getRandom();
+
+    // 如果找不到梗圖或沒有圖片 URL，不進行任何回應
+    if (!quote || !quote.imageUrl) {
+      return;
+    }
+
+    // 只直接回應圖片網址
+    await message.reply({ content: quote.imageUrl });
     return;
   }
 });
